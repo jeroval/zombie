@@ -1,0 +1,14 @@
+{
+  "step_id": "903a0e8a985b45fcbc49af824b325265",
+  "label": "ruff-check",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "status": "PASS",
+  "returncode": 0,
+  "duration_s": 0.016,
+  "measurement": "MONOTONIC_PROCESS_ELAPSED",
+  "schema_version": 1,
+  "type": "step_finished",
+  "at": "2026-10-16T11:45:58.274811+00:00",
+  "event_id": "183d5b69c10f4b429d148eb1d3637a1f"
+}

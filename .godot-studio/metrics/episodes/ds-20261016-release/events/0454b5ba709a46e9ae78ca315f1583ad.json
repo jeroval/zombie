@@ -1,0 +1,10 @@
+{
+  "step_id": "973334425f4741769cc0a0f9bcf55a9f",
+  "label": "final-exported-full-input-traversal",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:40:00.391911+00:00",
+  "event_id": "0454b5ba709a46e9ae78ca315f1583ad"
+}

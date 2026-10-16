@@ -1,0 +1,15 @@
+{
+  "status": "INTERRUPTED",
+  "summary": "The Windows release and exported traversal succeeded, but two earlier measurement wrappers were interrupted before recording their step_finished events; later retries passed.",
+  "next_action": "Run a clean final audit episode and preserve the interrupted telemetry as-is.",
+  "revision_end": {
+    "commit": "3f501d8ee35274b6e91e8766904be97de3298904",
+    "dirty": true
+  },
+  "unfinished_step_count": 2,
+  "acceptance": "SEE_CANONICAL_REVIEW",
+  "schema_version": 1,
+  "type": "finish",
+  "at": "2026-10-16T11:45:24.836148+00:00",
+  "event_id": "fa542ab3ec50468d8ef115b01824fd46"
+}

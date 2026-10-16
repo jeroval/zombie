@@ -5,6 +5,10 @@
 Sous Windows 64 bits, ouvrir `Dernier-Signal.exe`. Le jeu est autonome : Godot,
 Python, Blender, Codex et une connexion Internet ne sont pas nécessaires.
 
+Cette version locale n'est pas signée avec Authenticode. Avant de la distribuer
+ou de la lancer depuis une copie, comparer l'empreinte SHA-256 de l'archive avec
+le fichier `Dernier-Signal-windows-x86_64.zip.sha256` livré à côté du ZIP.
+
 ## Mission
 
 Le refuge ne peut plus appeler les secours. Explorez le quartier et récupérez :

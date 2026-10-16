@@ -132,3 +132,29 @@ paquet sont prêts. Les notices Godot seront générées depuis le binaire exact
 Quaternius CC0 et la voix SIWIS CC BY 4.0 sont attribués. M4 est vérifié par les
 probes automatisées. Le rythme et le plaisir humains restent ouverts ; M5 doit
 encore produire puis tester l'exécutable réel.
+
+## 13 h 43 — livraison Windows 1.0.0 vérifiée
+
+Le paquet Windows x86_64 a été généré depuis le commit propre `3f501d8`. Il
+contient l'exécutable, le PCK séparé, le lanceur console de vérification, les
+notices exactes de Godot, le guide joueur, les attributions tierces, un manifeste
+et les empreintes SHA-256. Le lancement autonome a réussi. Le ZIP mesure
+42 476 735 octets et son SHA-256 est
+`86403772664f46fbd057c0422091b906423acee44ad956203a0b987d85b093c7`.
+
+Le parcours complet exécuté contre ce build exporté a réussi en 135,88 s : trois
+composants, radio, défense, extraction, 82 points de vie, 34 neutralisations et
+108 tirs. La capture montre l'écran final « Évacuation réussie ». Cette preuve
+est une traversée par entrées pilotée par l'agent et ne remplace pas un playtest
+humain. La sonde de performance reste limitée à la RTX 4070 SUPER mesurée.
+
+L'exécutable n'a pas de signature Authenticode, faute de certificat de signature.
+Le PCK reste séparé afin de permettre une signature ultérieure sans reconstruire
+un exécutable à ressources embarquées. Les sommes et la révision source rendent
+le livrable local vérifiable. M5 et M6 sont clos au niveau technique défini ; le
+plaisir, le mixage humain et l'acceptation artistique du créateur restent ouverts.
+
+La mesure GAC a aussi révélé que `metrics run` crée son événement avant d'appeler
+la commande observée. L'empaqueteur accepte donc uniquement ces nouveaux
+événements append-only comme bruit de mesure et continue de refuser toute vraie
+modification produit. La proposition GAC-I11 formalise un contrat plus propre.

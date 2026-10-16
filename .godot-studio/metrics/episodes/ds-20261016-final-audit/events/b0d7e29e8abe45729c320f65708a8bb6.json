@@ -1,0 +1,14 @@
+{
+  "step_id": "df05feb620824995b39fa016a65bad02",
+  "label": "godot-studio-smoke",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "status": "PASS",
+  "returncode": 0,
+  "duration_s": 2.937,
+  "measurement": "MONOTONIC_PROCESS_ELAPSED",
+  "schema_version": 1,
+  "type": "step_finished",
+  "at": "2026-10-16T11:46:08.457486+00:00",
+  "event_id": "b0d7e29e8abe45729c320f65708a8bb6"
+}

@@ -1,0 +1,10 @@
+{
+  "step_id": "87112fc01e6d48ed868e1ad9f3276088",
+  "label": "python-unit-tests",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:45:59.077538+00:00",
+  "event_id": "4163ed85212a4278ba78d015ddd4222d"
+}

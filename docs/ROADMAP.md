@@ -27,8 +27,8 @@ Les horaires sont des budgets de travail, pas des preuves d'acceptation.
 | M2 | 14 h 30 | Quartier authored, silhouettes de survivant/infectés, animations et rendu encré cohérent | Sources/licences, exports, vues en jeu et mouvement inspectés | VÉRIFIÉ par revue agent |
 | M3 | 15 h 15 | Retours de tir, dégâts, progression, sons, musique et ambiance ; HUD et menus finis | Lecture réelle, options, pause, lisibilité aux résolutions cibles | VÉRIFIÉ techniquement et graphiquement |
 | M4 | 16 h 15 | Jouabilité équilibrée, parcours complets et corrections | Tests entrée/sortie, parties représentatives, performances mesurées | VÉRIFIÉ par probes automatisées |
-| M5 | 17 h 15 | Exécutable Windows autonome, crédits et mode d'emploi | Export depuis révision identifiée, lancement hors éditeur, parcours sur export | EN COURS |
-| M6 | 18 h 00 | Livraison vérifiée, suivi final, bilan indicateurs et propositions plugin | Audit de tous les critères ; aucune régression bloquante connue | À FAIRE |
+| M5 | 17 h 15 | Exécutable Windows autonome, crédits et mode d'emploi | Export depuis révision identifiée, lancement hors éditeur, parcours sur export | VÉRIFIÉ |
+| M6 | 18 h 00 | Livraison vérifiée, suivi final, bilan indicateurs et propositions plugin | Audit de tous les critères ; aucune régression bloquante connue | TERMINÉ |
 
 ## Ordre et arbitrages
 
@@ -56,3 +56,7 @@ Les horaires sont des budgets de travail, pas des preuves d'acceptation.
 
 La durée de partie et le plaisir restent des objectifs de conception à éprouver.
 Les observations agent, les tests automatiques et les retours humains sont distincts.
+Le livrable Windows 1.0.0 a passé son lancement et le parcours mission complet
+depuis l'exécutable exporté. Il n'est pas signé avec Authenticode ; le fichier
+`.sha256` permet d'en vérifier l'intégrité. Le playtest humain et l'acceptation
+artistique du créateur restent ouverts et ne sont pas présentés comme acquis.
