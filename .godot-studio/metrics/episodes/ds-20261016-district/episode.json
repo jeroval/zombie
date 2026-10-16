@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "episode_id": "ds-20261016-district",
+  "objective": "Integrate three authored FPS interiors and validate reachable objectives",
+  "outcome_id": "DS-DISTRICT",
+  "category": "assets",
+  "owner": "studio-decision-kernel",
+  "model": "GPT-6",
+  "comparison_group": "UNKNOWN",
+  "cache_state": "WARM",
+  "plugin_version": "3.38.0",
+  "started_at": "2026-10-16T10:40:51.917312+00:00",
+  "revision_start": {
+    "commit": "cfb95b3818d4761e8e32b29496e7564b18343364",
+    "dirty": true
+  },
+  "contract_ref": null,
+  "continuation_of": null,
+  "measurement": "WALL_CLOCK",
+  "token_coverage": "UNKNOWN_UNTIL_EXPLICIT_IMPORT"
+}

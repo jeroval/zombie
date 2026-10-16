@@ -1,6 +1,6 @@
 # Dernier Signal — roadmap de livraison
 
-Révision 1 — 16 octobre 2026, 12 h 10 (Europe/Paris). Échéance : 18 h 00.
+Révision 2 — 16 octobre 2026, direction FPS imposée par le créateur. Échéance : 18 h 00.
 Responsable : Codex. Contrat produit : [conception](conception/01-concept.md).
 État vivant : [suivi](suivi/ETAT.md). Mesures : [indicateurs](indicateurs/README.md).
 
@@ -23,8 +23,8 @@ Les horaires sont des budgets de travail, pas des preuves d'acceptation.
 | ID | Cible horaire | Capacité livrée | Preuve requise | État |
 | --- | --- | --- | --- | --- |
 | M0 | 12 h 20 | Conception, roadmap, suivi, indicateurs et dépôt récupérable | Documents cohérents, branche et commit | TERMINÉ |
-| M1 | 13 h 15 | Partie complète jouable avec exploration, combat, composants, défense et extraction | Parcours victoire/défaite/rejouer ; tests des règles ; contrôle graphique | À FAIRE |
-| M2 | 14 h 30 | Quartier authored, silhouettes de survivant/infectés, animations et rendu encré cohérent | Sources/licences, exports, vues en jeu et mouvement inspectés | À FAIRE |
+| M1 | 13 h 15 | Partie complète jouable avec exploration, combat, composants, défense et extraction | Parcours victoire/défaite/rejouer ; tests des règles ; contrôle graphique | VÉRIFIÉ sur prototype, parcours agent |
+| M2 | 14 h 30 | Quartier authored, silhouettes de survivant/infectés, animations et rendu encré cohérent | Sources/licences, exports, vues en jeu et mouvement inspectés | EN COURS |
 | M3 | 15 h 15 | Retours de tir, dégâts, progression, sons, musique et ambiance ; HUD et menus finis | Lecture réelle, options, pause, lisibilité aux résolutions cibles | À FAIRE |
 | M4 | 16 h 15 | Jouabilité équilibrée, parcours complets et corrections | Tests entrée/sortie, parties représentatives, performances mesurées | À FAIRE |
 | M5 | 17 h 15 | Exécutable Windows autonome, crédits et mode d'emploi | Export depuis révision identifiée, lancement hors éditeur, parcours sur export | À FAIRE |

@@ -26,6 +26,10 @@ func tap(action: String) -> void:
 	Input.parse_input_event(release)
 
 func run() -> void:
+	if DisplayServer.get_name() == "headless":
+		push_error("This mouse-input traversal requires a graphical backend; use gameplay_contract.gd for headless rules.")
+		quit(2)
+		return
 	game = load("res://scenes/main.tscn").instantiate()
 	root.add_child(game)
 	await process_frame

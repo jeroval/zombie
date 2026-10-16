@@ -1,0 +1,251 @@
+[
+  {
+    "id": "clinic",
+    "status": "EXPERIMENTAL",
+    "walls": [
+      {
+        "position": [
+          0,
+          1.8,
+          -5
+        ],
+        "size": [
+          12,
+          3.6,
+          0.3
+        ]
+      },
+      {
+        "position": [
+          -6,
+          1.8,
+          0
+        ],
+        "size": [
+          0.3,
+          3.6,
+          10
+        ]
+      },
+      {
+        "position": [
+          6,
+          1.8,
+          0
+        ],
+        "size": [
+          0.3,
+          3.6,
+          10
+        ]
+      },
+      {
+        "position": [
+          -3.6500000000000004,
+          1.8,
+          5
+        ],
+        "size": [
+          4.7,
+          3.6,
+          0.3
+        ]
+      },
+      {
+        "position": [
+          3.6500000000000004,
+          1.8,
+          5
+        ],
+        "size": [
+          4.7,
+          3.6,
+          0.3
+        ]
+      },
+      {
+        "position": [
+          -3.5,
+          0.5,
+          0
+        ],
+        "size": [
+          1.5,
+          1,
+          2.6
+        ]
+      }
+    ],
+    "source": "art\\production\\district\\clinic.blend",
+    "runtime": "game\\assets\\district\\clinic.glb",
+    "source_sha256": "17838ac4ba7623adba5ff4003f9d843512264a24c58dc3e71594875ec63379bd",
+    "runtime_sha256": "ed8264def90cd4ed4f838112cd649b853b30cd8633768706eb1f2789995a7a82",
+    "bounds_m": [
+      12.600000381469727,
+      3.869999885559082,
+      10.690000057220459
+    ],
+    "door_width_m": 2.6,
+    "license": "Project original",
+    "front": "+Z",
+    "up": "+Y"
+  },
+  {
+    "id": "garage",
+    "status": "EXPERIMENTAL",
+    "walls": [
+      {
+        "position": [
+          0,
+          1.8,
+          -5
+        ],
+        "size": [
+          12,
+          3.6,
+          0.3
+        ]
+      },
+      {
+        "position": [
+          -6,
+          1.8,
+          0
+        ],
+        "size": [
+          0.3,
+          3.6,
+          10
+        ]
+      },
+      {
+        "position": [
+          6,
+          1.8,
+          0
+        ],
+        "size": [
+          0.3,
+          3.6,
+          10
+        ]
+      },
+      {
+        "position": [
+          -4.5,
+          1.8,
+          5
+        ],
+        "size": [
+          3.0,
+          3.6,
+          0.3
+        ]
+      },
+      {
+        "position": [
+          4.5,
+          1.8,
+          5
+        ],
+        "size": [
+          3.0,
+          3.6,
+          0.3
+        ]
+      }
+    ],
+    "source": "art\\production\\district\\garage.blend",
+    "runtime": "game\\assets\\district\\garage.glb",
+    "source_sha256": "2ea4f9a632f51939ab3d52f48201cbca3df07132ceabca240138e2edba22b0d0",
+    "runtime_sha256": "fa01abe198e45fb8903550d4648e9f4bf92ec4cecb09136c27a9ccdf630ab480",
+    "bounds_m": [
+      12.600000381469727,
+      3.869999885559082,
+      10.630000114440918
+    ],
+    "door_width_m": 6.0,
+    "license": "Project original",
+    "front": "+Z",
+    "up": "+Y"
+  },
+  {
+    "id": "telecom",
+    "status": "EXPERIMENTAL",
+    "walls": [
+      {
+        "position": [
+          0,
+          1.8,
+          -5
+        ],
+        "size": [
+          12,
+          3.6,
+          0.3
+        ]
+      },
+      {
+        "position": [
+          -6,
+          1.8,
+          0
+        ],
+        "size": [
+          0.3,
+          3.6,
+          10
+        ]
+      },
+      {
+        "position": [
+          6,
+          1.8,
+          0
+        ],
+        "size": [
+          0.3,
+          3.6,
+          10
+        ]
+      },
+      {
+        "position": [
+          -3.6500000000000004,
+          1.8,
+          5
+        ],
+        "size": [
+          4.7,
+          3.6,
+          0.3
+        ]
+      },
+      {
+        "position": [
+          3.6500000000000004,
+          1.8,
+          5
+        ],
+        "size": [
+          4.7,
+          3.6,
+          0.3
+        ]
+      }
+    ],
+    "source": "art\\production\\district\\telecom.blend",
+    "runtime": "game\\assets\\district\\telecom.glb",
+    "source_sha256": "a36c8ee85d9c8ea2b8e17aaae32c7ce2b1fda670872104172e2b22c3621e5dc1",
+    "runtime_sha256": "7b1da07e8bc14ec2d76c182c5ebfab20b15d2b8ab636969cd8f464678f7ab685",
+    "bounds_m": [
+      12.600000381469727,
+      9.0,
+      10.690000057220459
+    ],
+    "door_width_m": 2.6,
+    "license": "Project original",
+    "front": "+Z",
+    "up": "+Y"
+  }
+]

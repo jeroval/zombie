@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-16T10:38:41.425098+00:00",
+  "generated_at": "2026-10-16T10:44:37.474786+00:00",
   "authority": "studio-decision-kernel",
   "runtime_verified": false,
-  "episode_count": 3,
+  "episode_count": 4,
   "tokens": {
     "input_tokens": null,
     "output_tokens": null,
@@ -17,6 +17,11 @@
   "report": "docs/indicateurs/mesures.md",
   "recent_episodes": [
     {
+      "id": "ds-20261016-district",
+      "objective": "Integrate three authored FPS interiors and validate reachable objectives",
+      "status": "COMPLETED"
+    },
+    {
       "id": "ds-20261016-art-anchor",
       "objective": "Adapt licensed zombie and pistol assets and verify FPS combat",
       "status": "COMPLETED"
@@ -24,11 +29,6 @@
     {
       "id": "ds-20261016-fps-core",
       "objective": "Implement the complete first-person mission loop",
-      "status": "COMPLETED"
-    },
-    {
-      "id": "ds-20261016-design",
-      "objective": "Définir le jeu complet, les jalons et les mesures avant production",
       "status": "COMPLETED"
     }
   ],

@@ -1,0 +1,10 @@
+{
+  "step_id": "cbe378a9a06242f8ba5d074d15122180",
+  "label": "district-contract",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T10:43:41.297259+00:00",
+  "event_id": "d237ccda2e2140619b8317d5687460b3"
+}

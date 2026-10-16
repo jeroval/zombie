@@ -31,5 +31,6 @@ void light() {
     band = mix(band, 1.0, smoothstep(upper - width, upper + width, n_dot_l));
     // Godot applies ALBEDO; do not multiply it again here.
     // Cast-shadow attenuation is separate from the diffuse bands.
-    DIFFUSE_LIGHT += band * ATTENUATION * LIGHT_COLOR / PI;
+    // Keep the drawn shadow group readable inside the authored buildings.
+    DIFFUSE_LIGHT += mix(shadow_value, band, ATTENUATION) * LIGHT_COLOR / PI;
 }

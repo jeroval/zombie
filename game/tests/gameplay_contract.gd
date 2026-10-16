@@ -55,13 +55,19 @@ func run() -> void:
 	game.player.reload()
 	game.player._physics_process(1.7)
 	check(game.player.ammo == 5 and game.player.reserve == 0, "Reload preserves total ammunition")
-	game.player.position = Vector3(-19, 0, 20)
+	# Stand in the alley, clear of the newly authored truck at z=23.
+	game.player.position = Vector3(-19, 0, 18)
 	game.player.rotation = Vector3.ZERO
 	game.player.camera.rotation = Vector3.ZERO
 	await physics_frame
 	var hit: Dictionary = game.player.ray(50)
 	check(not hit.is_empty() and hit.collider is StaticBody3D, "Walls block hitscan")
-	check(game.world.path(Vector3(-19, 0, 20), Vector3(-19, 0, -25)).size() > 45, "Navigation routes around buildings")
+	var detour: PackedVector3Array = game.world.path(Vector3(-19, 0, 18), Vector3(-19, 0, -25))
+	var goes_around := false
+	for point in detour:
+		if absf(point.x + 19) > 6:
+			goes_around = true
+	check(detour.size() > 0 and goes_around, "Navigation routes around buildings")
 	game.queue_free()
 	await process_frame
 	if failures.is_empty():

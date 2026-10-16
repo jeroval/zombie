@@ -63,3 +63,20 @@ zombie animé et pistolet intégrés comme candidats. Le contrat glTF des UV,
 poids, joints et animations passe ; les poses de 50 os changent dans Godot.
 Captures Idle et Punch inspectées avec véhicule et arme. Restent notamment
 mains FPS, ville authored, audio, feedback, options, feuilles multivues et export.
+
+## 12 h 45 — intérieurs et second parcours
+
+Clinique, garage et télécom ont désormais des sources Blender, portes, fenêtres,
+enseignes, joints et mobilier. Les objectifs sont à l'intérieur. Les colliders
+des murs et le maillage de navigation dérivent de la recette de bâtiment.
+Correction de navigation : utiliser les centres entiers réellement inclus dans
+la boîte élargie, au lieu d'arrondir vers l'extérieur et fermer les portes.
+Le test de détour a déplacé son départ hors du nouveau camion ; il exige un
+vrai contournement, sans conserver une coordonnée désormais occupée.
+
+Parcours graphique agent après intégration : victoire à 135,8 s, santé 82,
+trois composants, 34 infectés neutralisés, 111 tirs. Test de règles également
+réussi. Preuve reproductible dans `docs/indicateurs/parcours-fps-district.json`.
+M1 est vérifié au niveau prototype. M2 reste ouvert : sol, limites, radio et
+objets sont encore provisoires ; mains, feuilles multivues et revue artistique
+complète manquent. La rapidité du bot ne valide pas la durée humaine cible.
