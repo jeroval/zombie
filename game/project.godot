@@ -1,0 +1,22 @@
+; Studio calibration only; gameplay is not implemented.
+config_version=5
+
+[application]
+config/name="zombie"
+run/main_scene="res://scenes/main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[display]
+window/size/viewport_width=1152
+window/size/viewport_height=648
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.06, 0.08, 0.11, 1)
+
+[audio]
+buses/default_bus_layout="res://audio/default_bus_layout.tres"
+
+[filesystem]
+import/blender/enabled=false

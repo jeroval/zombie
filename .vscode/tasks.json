@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {"label": "Studio: diagnostic", "type": "process", "command": "${workspaceFolder}/.venv/Scripts/python.exe", "args": ["scripts/studio.py", "doctor"], "problemMatcher": []},
+    {"label": "Studio: Godot smoke", "type": "process", "command": "${workspaceFolder}/.venv/Scripts/python.exe", "args": ["scripts/studio.py", "smoke"], "problemMatcher": []},
+    {"label": "Studio: Blender + audio roundtrip", "type": "process", "command": "${workspaceFolder}/.venv/Scripts/python.exe", "args": ["scripts/studio.py", "check"], "problemMatcher": []},
+    {"label": "Studio: ouvrir Godot", "type": "process", "command": "${workspaceFolder}/.venv/Scripts/python.exe", "args": ["scripts/studio.py", "open"], "problemMatcher": []},
+    {"label": "Studio: démarrer Blender MCP", "type": "process", "command": "${workspaceFolder}/.venv/Scripts/python.exe", "args": ["scripts/studio.py", "blender"], "problemMatcher": []},
+    {"label": "Studio: tests Python", "type": "process", "command": "${workspaceFolder}/.venv/Scripts/python.exe", "args": ["-m", "unittest", "discover", "-s", "tests", "-v"], "problemMatcher": []}
+  ]
+}

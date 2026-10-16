@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "server_name": "gac-local-studio-zombie",
+  "project_scoped": true,
+  "allow_arbitrary_shell": false,
+  "allow_arbitrary_network": false,
+  "tools": ["studio_capabilities", "godot_validate_smoke", "ffmpeg_probe", "audio_convert", "blender_version", "voice_generate"]
+}
