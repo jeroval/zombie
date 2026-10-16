@@ -17,6 +17,7 @@ DIST_ROOT = ROOT / "dist"
 BUNDLE = DIST_ROOT / "Dernier-Signal"
 EXECUTABLE = BUNDLE / "Dernier-Signal.exe"
 CONSOLE_EXECUTABLE = BUNDLE / "Dernier-Signal.console.exe"
+RESOURCE_PACK = BUNDLE / "Dernier-Signal.pck"
 ARCHIVE = DIST_ROOT / "Dernier-Signal-windows-x86_64.zip"
 
 
@@ -64,6 +65,7 @@ def package() -> dict:
     for path in (
         EXECUTABLE,
         CONSOLE_EXECUTABLE,
+        RESOURCE_PACK,
         BUNDLE / "GODOT_COPYRIGHT.txt",
         BUNDLE / "GUIDE_JOUEUR.md",
         BUNDLE / "THIRD_PARTY_NOTICES.md",
@@ -108,6 +110,7 @@ def package() -> dict:
     )
     files = [
         EXECUTABLE,
+        RESOURCE_PACK,
         BUNDLE / "GODOT_COPYRIGHT.txt",
         BUNDLE / "GUIDE_JOUEUR.md",
         BUNDLE / "THIRD_PARTY_NOTICES.md",
@@ -122,6 +125,7 @@ def package() -> dict:
         "built_at_utc": datetime.now(UTC).isoformat(),
         "source_commit": git("rev-parse", "HEAD"),
         "godot": run_checked([godot, "--version"], timeout=30)["output"].strip(),
+        "resource_pack": "separate",
         "startup_smoke": "PASS" if "Godot Engine" in startup["output"] else "PASS_NO_HEADER",
         "files": {
             path.name: {"bytes": path.stat().st_size, "sha256": sha256(path)} for path in files

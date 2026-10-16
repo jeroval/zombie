@@ -1,0 +1,14 @@
+{
+  "step_id": "0794b9c03a93425790bc9e90bf82f39c",
+  "label": "exported-full-input-traversal-retry",
+  "phase": "test",
+  "work_kind": "FAILURE_DEMAND",
+  "status": "PASS",
+  "returncode": 0,
+  "duration_s": 136.89,
+  "measurement": "MONOTONIC_PROCESS_ELAPSED",
+  "schema_version": 1,
+  "type": "step_finished",
+  "at": "2026-10-16T11:37:46.697117+00:00",
+  "event_id": "5705fd54967846c6bde94a84ec9a28f8"
+}
