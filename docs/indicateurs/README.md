@@ -47,7 +47,7 @@ Classes de travail : VALUE, FAILURE_DEMAND, RISK_REDUCTION, MAINTENANCE, UNKNOWN
 Aucune observation humaine n'est encore disponible. Les scripts et agents sont
 identifiés comme tels ; ils ne simulent pas des débutants humains ni leur plaisir.
 
-## Mesures propres à ce jeu
+## Mesures de production des assets
 
 La comparaison des routes d'assets suit aussi les dimensions du plugin :
 acquisition/génération, crédits, calcul local, correction Blender, UV/matériaux,
