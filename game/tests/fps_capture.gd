@@ -18,4 +18,7 @@ func run() -> void:
 		quit(1)
 		return
 	print("FPS_CAPTURE_PASS")
+	game.queue_free()
+	await process_frame
+	await create_timer(0.15).timeout
 	quit.call_deferred(0)

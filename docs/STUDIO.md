@@ -2,8 +2,8 @@
 
 État vérifié le 16 octobre 2026. Godot Asset Cloud 3.38.0 orchestre la production ;
 le skill utilisateur `studio-3d-local` décrit les adaptateurs installés.
-Le projet Godot est `game/project.godot`. La scène initiale sert uniquement à
-calibrer caméra, lumière et pipeline ; aucun gameplay n'est encore implémenté.
+Le projet Godot est `game/project.godot`. Il contient une mission FPS complète :
+exploration de trois lieux, combat, réparation de radio, défense et extraction.
 
 ## Démarrer
 
@@ -120,6 +120,12 @@ préserve pas les UV et matériaux source. Préserver l'original et transférer 
 rig sur ce maillage dans Blender lorsque l'apparence doit être conservée.
 Conserver le `.blend` éditable, exporter uniquement l'asset et la scène actifs
 en GLB, puis vérifier déformation, animations et apparence dans Godot.
+
+Les planches multivues GAC demandent une collection Blender nommée et Pillow,
+verrouillé dans le groupe de développement. Les scripts de construction créent
+les collections `Asset`, `DistrictModule`, `MissionProp`, `Streetscape` ou
+`FPSArms`. Une planche courante prouve la fraîcheur des vues ; l'inspection
+visuelle et la vérification runtime restent des preuves séparées.
 
 `art/` contient les sources et licences ; `game/assets/` reçoit les exports.
 L'import implicite `.blend` de Godot est désactivé pour conserver un export

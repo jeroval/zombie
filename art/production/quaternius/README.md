@@ -1,6 +1,6 @@
 # Quaternius — candidats adaptés pour Dernier Signal
 
-Statut : **EXPERIMENTAL**, pas encore des packages artistiques terminés.
+Statut : candidats tiers intégrés, avec licence et provenance conservées.
 Sources originales et licence : `../../vendor/quaternius-zombie/provenance.json`.
 Page officielle : https://quaternius.com/packs/zombieapocalypsekit.html (CC0).
 Le fichier de licence fourni utilise un ancien titre de pack ; il est conservé
@@ -21,9 +21,9 @@ rapport au contrôleur qui regarde vers -Z. Les collisions restent dans Godot.
 Premières preuves : import Godot réussi, squelette de 50 os et poses réellement
 différentes en Idle/Walk/Punch/Death ; captures `asset_anchor.gd` inspectées.
 Le zombie, le véhicule et le pistolet sont reconnaissables dans la même scène.
-Ces captures montrent encore un quartier blockout. La vue d'arme flotte sans
-mains ; les feuilles multivues et la revue finale de toutes les familles restent
-à faire. Les paramètres de contours et l'anticrénelage doivent être affinés.
+`zombie_basic.views.png` est une feuille GAC courante et inspectée. Le pistolet
+est désormais tenu par le viewmodel original du projet et les captures montrent
+le quartier habillé. L'acceptation artistique humaine reste ouverte.
 
 Les avertissements d'export sur les contraintes du rig sont résolus par le
 baking de l'exporteur ; les influences sont réduites à quatre par sommet.

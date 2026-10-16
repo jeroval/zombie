@@ -15,6 +15,7 @@ pas des mesures comparatives de gain. À enrichir aux jalons avec preuves réell
 | GAC-I07 | Haute | Erreur de décision de l'agent : caméra isométrique supposée, corrigée par le créateur en FPS ; ce n'est pas un bug démontré du plugin | Distinguer explicitement contraintes créateur, choix agent et hypothèses dans le contrat initial | Une correction caméra doit invalider contrôles, carte et critères de revue dépendants |
 | GAC-I08 | Moyenne | Le parcours FPS headless ne capture pas la souris ; le même parcours graphique gagne | Déclarer les capacités d'entrée du backend dans les recettes de test | Un test d'entrée souris doit prouver la capture et le mouvement de caméra avant le scénario |
 | GAC-I09 | Moyenne | Blender background sans factory-startup charge les extensions utilisateur et tente de prendre leurs ports ; observé sur ce poste | Pour les scripts autonomes, préférer factory-startup et charger explicitement les dépendances nécessaires | Export identique et aucun démarrage de serveur d'extension annexe |
+| GAC-I10 | Moyenne | `asset-sheet render` a découvert successivement pendant l'exécution l'absence d'une collection Blender nommée puis de Pillow | Ajouter un préflight qui vérifie collection, dépendance d'image et sortie avant de lancer Blender | Même source sans collection puis sans Pillow : erreurs ciblées avant rendu ; source conforme : planche courante |
 
 Gain attendu : moins de diagnostic et de configuration incohérente. **Gain non
 mesuré**. Aucun pourcentage de temps ou de tokens n'est attribué à ces propositions.

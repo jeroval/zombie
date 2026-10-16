@@ -86,6 +86,16 @@ def add_structural_ink(obj):
     ink.data.materials.append(material)
 
 
+def move_to_collection(name):
+    collection = bpy.data.collections.new(name)
+    bpy.context.scene.collection.children.link(collection)
+    for obj in list(bpy.context.scene.objects):
+        collection.objects.link(obj)
+        for owner in list(obj.users_collection):
+            if owner != collection:
+                owner.objects.unlink(obj)
+
+
 def build(relative):
     original = VENDOR / relative
     asset_id = original.stem.lower()
@@ -122,6 +132,7 @@ def build(relative):
     root.location.z = -min(p.z for p in points) * factor
     for obj in meshes:
         add_structural_ink(obj)
+    move_to_collection("Asset")
     bpy.ops.object.select_all(action="DESELECT")
     for obj in bpy.context.scene.objects:
         obj.hide_set(False)

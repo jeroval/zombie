@@ -1,0 +1,66 @@
+{
+  "issue_id": "asset-sheet-preflight-01",
+  "fingerprint": "asset-sheet-preconditions-late",
+  "symptom": "La première planche multivue a échoué successivement sur une collection absente puis sur Pillow absent.",
+  "cause": "Les scripts du projet n'exposaient pas de collection nommée et la dépendance d'assemblage d'image n'était pas déclarée.",
+  "confidence": "CONFIRMED",
+  "origin": "INTRODUCED",
+  "attribution": "PROJECT",
+  "scope": "MILESTONE",
+  "owner": "studio-decision-kernel",
+  "status": "RESOLVED",
+  "next_action": "Conserver les collections explicites et la dépendance verrouillée lors des reconstructions.",
+  "affected_nodes": [
+    "m2-asset-review"
+  ],
+  "evidence_refs": [
+    {
+      "path": "scripts/build_viewmodel.py",
+      "sha256": "fa91f73a54b109e7075841e9d124bac3144f279cc339e74371c6bc8e9c51995e"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "ed9c5271825a98dc2cb8d9e767f31c2878bb163022c84080749e862d4cd30dac"
+    },
+    {
+      "path": "art/production/viewmodel/fps_arms.views.json",
+      "sha256": "330f8b06b7676a0ea4bb09a8c0345679aaf6f1e374843186156c060441898d73"
+    }
+  ],
+  "solutions": [
+    {
+      "id": "declare-sheet-prerequisites",
+      "change": "Créer une collection nommée dans chaque source et verrouiller Pillow dans les dépendances de développement.",
+      "status": "VERIFIED",
+      "verification_kind": "Cinq planches multivues rendues et contrôlées courantes",
+      "evidence_refs": [
+        {
+          "path": "art/production/viewmodel/fps_arms.views.json",
+          "sha256": "330f8b06b7676a0ea4bb09a8c0345679aaf6f1e374843186156c060441898d73"
+        },
+        {
+          "path": "art/production/quaternius/zombie_basic.views.json",
+          "sha256": "93b140f7271301871f24384269da06c3b54e16f353ce09dd161d9976c21be89b"
+        },
+        {
+          "path": "art/production/district/clinic.views.json",
+          "sha256": "4e5a09ba04f101b9652d21f16ff1b78c3b8790276d30f2f1b92b1b1abc362048"
+        },
+        {
+          "path": "art/production/mission-props/radio_console.views.json",
+          "sha256": "7df413e3bc3de7b7383aa3a3f03b50d42dab5f975bda7435f47ca8440f7f457c"
+        },
+        {
+          "path": "art/production/streetscape/streetscape.views.json",
+          "sha256": "19b8cd80aa01754a3ba508fe96c346e962fe7ce7c77aa0ae77a792a824860118"
+        }
+      ]
+    }
+  ],
+  "opened_at": "2026-10-16T11:18:48.215815+00:00",
+  "resolved_at": "2026-10-16T11:18:48.215815+00:00",
+  "schema_version": 1,
+  "type": "problem",
+  "at": "2026-10-16T11:18:48.216816+00:00",
+  "event_id": "13426233a91647bb9695290d8e07aa18"
+}

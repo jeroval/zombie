@@ -26,6 +26,13 @@ func run() -> void:
 	check(absf(game.player.camera.position.y - 1.65) < 0.01, "First-person eye height")
 	check(game.player.position.y > -0.1, "Ground collision holds player")
 	check(not game.interact(), "Cannot activate radio without components")
+	var supply: Dictionary = game.world.supplies[0]
+	var reserve_before: int = game.player.reserve
+	var medicine_before: int = game.player.medicines
+	game.player.position = supply.position
+	check(game.interact(), "Optional reserves can be collected")
+	check(game.player.reserve == reserve_before + 36 and game.player.medicines == medicine_before + 1, "Reserves grant finite ammo and healing")
+	check(not game.interact(), "Optional reserves cannot be collected twice")
 	for item in game.world.objectives:
 		var route: PackedVector3Array = game.world.path(game.world.radio, item.position)
 		check(route.size() > 2, "Objective reachable: " + item.title)
@@ -70,6 +77,7 @@ func run() -> void:
 	check(detour.size() > 0 and goes_around, "Navigation routes around buildings")
 	game.queue_free()
 	await process_frame
+	await create_timer(0.15).timeout
 	if failures.is_empty():
 		print("GAMEPLAY_CONTRACT_PASS: movement, floor, mission, restart, death, ammo, walls, navigation")
 	else:

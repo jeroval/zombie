@@ -3,6 +3,7 @@ extends Node3D
 const LIMIT := 34
 var grid := AStarGrid2D.new()
 var objectives: Array[Dictionary] = []
+var supplies: Array[Dictionary] = []
 var radio := Vector3(0, 0, 25)
 var extraction := Vector3(0, 0, -29)
 var spawn_points := [Vector3(-28, 0, -25), Vector3(28, 0, -25), Vector3(-29, 0, 20), Vector3(29, 0, 20)]
@@ -14,10 +15,13 @@ func _ready() -> void:
 	grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES
 	grid.update()
 	box(Vector3(0, -0.25, 0), Vector3(70, 0.5, 70), Color("6b7370"), false)
-	box(Vector3(-35, 2, 0), Vector3(1, 4, 70), Color("303c49"))
-	box(Vector3(35, 2, 0), Vector3(1, 4, 70), Color("303c49"))
-	box(Vector3(0, 2, -35), Vector3(70, 4, 1), Color("303c49"))
-	box(Vector3(0, 2, 35), Vector3(70, 4, 1), Color("303c49"))
+	box(Vector3(-35, 2, 0), Vector3(1, 4, 70), Color.WHITE, true, false)
+	box(Vector3(35, 2, 0), Vector3(1, 4, 70), Color.WHITE, true, false)
+	box(Vector3(0, 2, -35), Vector3(70, 4, 1), Color.WHITE, true, false)
+	box(Vector3(0, 2, 35), Vector3(70, 4, 1), Color.WHITE, true, false)
+	var street: Node3D = load("res://assets/district/streetscape.glb").instantiate()
+	add_child(street)
+	ArtStyle.apply(street, Color.WHITE, 0.004)
 	building("clinic", Vector3(-19, 0, -12))
 	building("garage", Vector3(19, 0, 9))
 	building("telecom", Vector3(19, 0, -12))
@@ -29,11 +33,19 @@ func _ready() -> void:
 		prop("streetlights", pos, Vector3(0.35, 3.5, 0.35))
 	for pos in [Vector3(-24, 0, -4), Vector3(24, 0, 17), Vector3(25, 0, -4)]:
 		prop("barrel", pos, Vector3(0.8, 1.2, 0.8))
-	add_objective("Batterie", Vector3(-19, 0, -15), Color("7edb9b"))
-	add_objective("Carburant", Vector3(19, 0, 6), Color("efb866"))
-	add_objective("Antenne", Vector3(19, 0, -15), Color("75d2e5"))
-	marker("REFUGE / RADIO", radio, Color("efc779"))
-	marker("EVACUATION", extraction, Color("7be5d8"))
+	prop("trafficbarrier_1", Vector3(-13, 0, 7), Vector3(2.4, 1.0, 0.55))
+	prop("pallet", Vector3(-27, 0, -8), Vector3(1.3, 0.25, 1.3))
+	decoration("trashbag_1", Vector3(-12, 0, -9))
+	decoration("trashbag_1", Vector3(28, 0, 25))
+	decoration("watertower", Vector3(-29, 0, -28))
+	add_supply(Vector3(-25, 0, -17))
+	add_supply(Vector3(25, 0, 11))
+	add_supply(Vector3(12, 0, -25))
+	add_objective("Batterie", Vector3(-19, 0, -15), Color("7edb9b"), "battery")
+	add_objective("Carburant", Vector3(19, 0, 6), Color("efb866"), "fuel_can")
+	add_objective("Antenne", Vector3(19, 0, -15), Color("75d2e5"), "antenna_module")
+	marker("REFUGE / RADIO", radio, Color("efc779"), "radio_console")
+	marker("EVACUATION", extraction, Color("7be5d8"), "extraction_beacon")
 	var sun := DirectionalLight3D.new()
 	sun.rotation_degrees = Vector3(-45, -30, 0)
 	sun.shadow_enabled = true
@@ -60,11 +72,26 @@ func building(kind: String, pos: Vector3) -> void:
 		box(pos + Vector3(p[0], p[1], p[2]), Vector3(s[0], s[1], s[2]), Color.WHITE, true, false)
 
 func prop(asset: String, pos: Vector3, collision_size: Vector3) -> void:
+	decoration(asset, pos)
+	box(pos + Vector3.UP * collision_size.y / 2, collision_size, Color.WHITE, true, false)
+
+func decoration(asset: String, pos: Vector3) -> Node3D:
 	var model: Node3D = load("res://assets/models/" + asset + ".glb").instantiate()
 	add_child(model)
 	model.position = pos
 	ArtStyle.apply(model)
-	box(pos + Vector3.UP * collision_size.y / 2, collision_size, Color.WHITE, true, false)
+	return model
+
+func add_supply(pos: Vector3) -> void:
+	var model := decoration("chest", pos)
+	var label := Label3D.new()
+	label.text = "RÉSERVES"
+	label.position.y = 1.25
+	label.font_size = 32
+	label.pixel_size = 0.0045
+	label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	model.add_child(label)
+	supplies.append({"position": pos, "used": false, "node": model})
 
 func box(pos: Vector3, size: Vector3, color: Color, blocks := true, visible_mesh := true) -> void:
 	var solid := StaticBody3D.new()
@@ -90,21 +117,33 @@ func box(pos: Vector3, size: Vector3, color: Color, blocks := true, visible_mesh
 				if grid.is_in_boundsv(Vector2i(x, z)):
 					grid.set_point_solid(Vector2i(x, z))
 
-func marker(title: String, pos: Vector3, color: Color) -> Node3D:
+func marker(title: String, pos: Vector3, color: Color, asset := "") -> Node3D:
 	var root := Node3D.new()
 	root.position = pos
 	add_child(root)
-	var mesh := MeshInstance3D.new()
-	var box_mesh := BoxMesh.new()
-	box_mesh.size = Vector3(0.7, 0.8, 0.7)
-	mesh.mesh = box_mesh
-	mesh.position.y = 0.6
-	var mat := StandardMaterial3D.new()
-	mat.albedo_color = color
-	mat.emission_enabled = true
-	mat.emission = color * 0.3
-	mesh.material_override = mat
-	root.add_child(mesh)
+	if asset:
+		var model: Node3D = load("res://assets/mission/" + asset + ".glb").instantiate()
+		root.add_child(model)
+		ArtStyle.apply(model)
+		if asset == "extraction_beacon":
+			var light := OmniLight3D.new()
+			light.position.y = 1.5
+			light.light_color = color
+			light.light_energy = 2.0
+			light.omni_range = 5.0
+			root.add_child(light)
+	else:
+		var mesh := MeshInstance3D.new()
+		var box_mesh := BoxMesh.new()
+		box_mesh.size = Vector3(0.7, 0.8, 0.7)
+		mesh.mesh = box_mesh
+		mesh.position.y = 0.6
+		var mat := StandardMaterial3D.new()
+		mat.albedo_color = color
+		mat.emission_enabled = true
+		mat.emission = color * 0.3
+		mesh.material_override = mat
+		root.add_child(mesh)
 	var label := Label3D.new()
 	label.text = title
 	label.position.y = 2.5
@@ -114,8 +153,8 @@ func marker(title: String, pos: Vector3, color: Color) -> Node3D:
 	root.add_child(label)
 	return root
 
-func add_objective(title: String, pos: Vector3, color: Color) -> void:
-	objectives.append({"title": title, "position": pos, "collected": false, "node": marker(title, pos, color)})
+func add_objective(title: String, pos: Vector3, color: Color, asset: String) -> void:
+	objectives.append({"title": title, "position": pos, "collected": false, "node": marker(title, pos, color, asset)})
 
 func path(from: Vector3, to: Vector3) -> PackedVector3Array:
 	var start := Vector2i(clampi(roundi(from.x), -LIMIT, LIMIT), clampi(roundi(from.z), -LIMIT, LIMIT))

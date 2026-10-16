@@ -24,9 +24,10 @@ func _ready() -> void:
 	var shape := CollisionShape3D.new()
 	var capsule := CapsuleShape3D.new()
 	capsule.radius = 0.35
-	capsule.height = 1.7
+	# Cover the drawn head at a horizontal 1.65 m FPS sight line.
+	capsule.height = 1.9
 	shape.shape = capsule
-	shape.position.y = 0.85
+	shape.position.y = 0.95
 	add_child(shape)
 	body = MODEL.instantiate()
 	body.rotation.y = PI

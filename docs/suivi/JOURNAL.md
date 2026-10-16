@@ -80,3 +80,34 @@ réussi. Preuve reproductible dans `docs/indicateurs/parcours-fps-district.json`
 M1 est vérifié au niveau prototype. M2 reste ouvert : sol, limites, radio et
 objets sont encore provisoires ; mains, feuilles multivues et revue artistique
 complète manquent. La rapidité du bot ne valide pas la durée humaine cible.
+
+## 13 h 20 — quartier FPS, présentation et audio intégrés
+
+Le quartier dispose désormais de routes, trottoirs, passage refuge, façade de
+fond et repères d'extraction authored dans Blender. Les trois composants, la
+radio et la balise ont chacun un modèle original ; trois réserves optionnelles
+évitent une impasse de munitions. Les bras et mains FPS authored accompagnent le
+pistolet, avec balancement, recul, recharge, flash de bouche et impact. Le
+hitbox ennemi a été remonté après qu'un rayon centré a réellement frôlé sa
+capsule : le test de tir centré couvre la régression.
+
+Effets sonores et ambiance ont été générés localement par recette déterministe.
+Quatre messages radio français utilisent Piper/siwis avec attribution et
+empreintes conservées. La lecture réelle de l'ambiance, de la voix et d'un effet
+a avancé sur le backend audio. Le menu tient à 1152 × 648 et expose volumes,
+sensibilité, champ de vision, secousses et plein écran. Paramètres, meilleur
+temps d'évacuation et record de neutralisations sont persistants.
+
+Cinq planches multivues GAC sont courantes et ont été inspectées : mains FPS,
+zombie, clinique, console radio et quartier. La première tentative a révélé deux
+préconditions tardives, collection Blender nommée et Pillow ; les scripts de
+construction créent maintenant leur collection explicite et Pillow est verrouillé
+comme dépendance de développement. Proposition GAC-I10 enregistrée pour un
+préflight plus explicite.
+
+Après reconstruction de tous les GLB, les contrats gameplay et présentation,
+les animations, les assets de mission et la lecture audio passent. Le parcours
+graphique par entrées normales gagne en 135,88 s, santé 82, 34 neutralisations et
+108 tirs. C'est une preuve agent reproductible, pas un playtest humain ni une
+acceptation artistique du créateur. M2 et M3 sont clos à ce niveau de preuve ;
+M4 doit maintenant mesurer les performances et corriger les défauts observables.

@@ -10,8 +10,8 @@ construction et du mobilier identifiable. Chaque partie reste nommée et éditab
 Le fichier `build.json` lie sources et exports par empreinte ; les mêmes recettes
 produisent `game/data/buildings.json` pour les colliders et la navigation.
 
-Statut **EXPERIMENTAL** : première implantation inspectée en FPS. Import et
-chemins vers les trois objectifs passent. Un parcours agent graphique par entrées
-atteint l'extraction en 135,8 s. Les feuilles multivues, détails de sol,
-mobilier complémentaire, collisions du mobilier et revue finale restent ouverts.
-Ne pas confondre ces bâtiments avec l'acceptation artistique du quartier entier.
+Statut : candidats intégrés et inspectés en FPS. Import et chemins vers les trois
+objectifs passent. Un parcours agent graphique par entrées atteint l'extraction
+en 135,88 s après reconstruction. `clinic.views.png` est une feuille GAC courante
+et inspectée. Les collisions du mobilier non bloquant et l'acceptation artistique
+humaine du quartier entier restent ouvertes.

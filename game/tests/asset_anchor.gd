@@ -51,4 +51,7 @@ func run() -> void:
 			return
 	print("ASSET_ANCHOR_ANIMATION_MOVED: ", moved)
 	print("ASSET_ANCHOR_CAPTURED: Idle Walk Punch Death; bones=", skeleton.get_bone_count())
+	game.queue_free()
+	await process_frame
+	await create_timer(0.15).timeout
 	quit.call_deferred(0 if moved else 1)

@@ -1,0 +1,218 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "collection": "FPSArms",
+  "frame": 1,
+  "engine": "CYCLES",
+  "samples": 16,
+  "tile_size": 512,
+  "view_transform": "AgX",
+  "coordinate_system": "Blender Z up; front -Y; right +X. Asset orientation must be reviewed.",
+  "bounds_world": {
+    "min": [
+      -0.3914596140384674,
+      0.02718556486070156,
+      -0.65166175365448
+    ],
+    "max": [
+      0.4897606372833252,
+      0.5168492794036865,
+      -0.15963628888130188
+    ]
+  },
+  "unit_system": "METRIC",
+  "unit_scale": 1.0,
+  "dependencies": [],
+  "views": [
+    {
+      "name": "front",
+      "label": "FACE / -Y",
+      "projection": "ORTHOGRAPHIC",
+      "ortho_scale": 1.0398399829864502,
+      "camera_position": [
+        0.049150511622428894,
+        -3.0933470726013184,
+        -0.40564900636672974
+      ],
+      "framing_mode": "per-view",
+      "image": "00_front.png",
+      "framing": {
+        "alpha_bbox": [
+          46,
+          137,
+          469,
+          366
+        ],
+        "longest_extent_ratio": 0.8262,
+        "edge_contact": false,
+        "review_flags": []
+      }
+    },
+    {
+      "name": "back",
+      "label": "ARRIERE / +Y",
+      "projection": "ORTHOGRAPHIC",
+      "ortho_scale": 1.0398399829864502,
+      "camera_position": [
+        0.049150511622428894,
+        3.6373820304870605,
+        -0.40564900636672974
+      ],
+      "framing_mode": "per-view",
+      "image": "01_back.png",
+      "framing": {
+        "alpha_bbox": [
+          43,
+          137,
+          466,
+          366
+        ],
+        "longest_extent_ratio": 0.8262,
+        "edge_contact": false,
+        "review_flags": []
+      }
+    },
+    {
+      "name": "left",
+      "label": "GAUCHE / -X",
+      "projection": "ORTHOGRAPHIC",
+      "ortho_scale": 0.5805900692939758,
+      "camera_position": [
+        -3.316214084625244,
+        0.2720174193382263,
+        -0.40564900636672974
+      ],
+      "framing_mode": "per-view",
+      "image": "02_left.png",
+      "framing": {
+        "alpha_bbox": [
+          39,
+          44,
+          461,
+          453
+        ],
+        "longest_extent_ratio": 0.8242,
+        "edge_contact": false,
+        "review_flags": []
+      }
+    },
+    {
+      "name": "right",
+      "label": "DROITE / +X",
+      "projection": "ORTHOGRAPHIC",
+      "ortho_scale": 0.5805900692939758,
+      "camera_position": [
+        3.4145150184631348,
+        0.2720174193382263,
+        -0.40564900636672974
+      ],
+      "framing_mode": "per-view",
+      "image": "03_right.png",
+      "framing": {
+        "alpha_bbox": [
+          52,
+          44,
+          473,
+          453
+        ],
+        "longest_extent_ratio": 0.8223,
+        "edge_contact": false,
+        "review_flags": []
+      }
+    },
+    {
+      "name": "top",
+      "label": "DESSUS / +Z",
+      "projection": "ORTHOGRAPHIC",
+      "ortho_scale": 1.0398398637771606,
+      "camera_position": [
+        0.049150511622428894,
+        0.2720174193382263,
+        2.9597156047821045
+      ],
+      "framing_mode": "per-view",
+      "image": "04_top.png",
+      "framing": {
+        "alpha_bbox": [
+          46,
+          134,
+          468,
+          371
+        ],
+        "longest_extent_ratio": 0.8242,
+        "edge_contact": false,
+        "review_flags": []
+      }
+    },
+    {
+      "name": "bottom",
+      "label": "DESSOUS / -Z",
+      "projection": "ORTHOGRAPHIC",
+      "ortho_scale": 1.0398398637771606,
+      "camera_position": [
+        0.049150511622428894,
+        0.2720174193382263,
+        -3.7710134983062744
+      ],
+      "framing_mode": "per-view",
+      "image": "05_bottom.png",
+      "framing": {
+        "alpha_bbox": [
+          44,
+          134,
+          466,
+          371
+        ],
+        "longest_extent_ratio": 0.8242,
+        "edge_contact": false,
+        "review_flags": []
+      }
+    },
+    {
+      "name": "isometric",
+      "label": "AXONOMETRIE / +X -Y +Z",
+      "projection": "ORTHOGRAPHIC",
+      "ortho_scale": 0.9167378544807434,
+      "camera_position": [
+        1.9788050651550293,
+        -1.7356016635894775,
+        1.4860597848892212
+      ],
+      "framing_mode": "per-view",
+      "image": "06_isometric.png",
+      "framing": {
+        "alpha_bbox": [
+          46,
+          83,
+          473,
+          431
+        ],
+        "longest_extent_ratio": 0.834,
+        "edge_contact": false,
+        "review_flags": []
+      }
+    }
+  ],
+  "limits": [
+    "Source-material studio review, not a Godot screenshot.",
+    "Near-clip sections are visual, uncapped and not construction drawings.",
+    "Only the specified frame and active-scene collection were rendered."
+  ],
+  "schema_version": 1,
+  "kind": "blender_asset_sheet",
+  "source": {
+    "path": "fps_arms.blend",
+    "sha256": "3db149f7cd649296f2444483fcf19fd98da721f7e451600294811ff5f12bd059"
+  },
+  "sheet": {
+    "path": "fps_arms.views.png",
+    "sha256": "834219ee650540949823350e41a52a531ac4c4708901c437e656374addb9f2d9"
+  },
+  "generation_status": "GENERATED",
+  "visual_review": "NOT_RUN",
+  "godot_runtime": "NOT_RUN",
+  "source_was_modified": false,
+  "tool_sha256": {
+    "orchestrator": "1f2057bbec775aedb162c5a23877d864d5aaa0bc24c900852adb0140bb66e06f",
+    "worker": "578aa2edd531edfadce0dacbb51b02506eb2510222165fd48837f8fc1b30a85b"
+  }
+}

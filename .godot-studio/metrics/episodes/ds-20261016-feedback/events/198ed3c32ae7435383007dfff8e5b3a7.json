@@ -1,0 +1,14 @@
+{
+  "step_id": "03a28ec42f5147a689f2eeb2c8a383b8",
+  "label": "final-fps-input-traversal",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "status": "PASS",
+  "returncode": 0,
+  "duration_s": 136.969,
+  "measurement": "MONOTONIC_PROCESS_ELAPSED",
+  "schema_version": 1,
+  "type": "step_finished",
+  "at": "2026-10-16T11:15:19.023054+00:00",
+  "event_id": "198ed3c32ae7435383007dfff8e5b3a7"
+}

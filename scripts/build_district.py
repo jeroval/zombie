@@ -56,6 +56,16 @@ def label(text, position, size, mat):
     return obj
 
 
+def move_to_collection(name):
+    collection = bpy.data.collections.new(name)
+    bpy.context.scene.collection.children.link(collection)
+    for obj in list(bpy.context.scene.objects):
+        collection.objects.link(obj)
+        for owner in list(obj.users_collection):
+            if owner != collection:
+                owner.objects.unlink(obj)
+
+
 def build(kind, title, wall_color, accent_color, door_width):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     wall = material("PaintedPlaster", wall_color)
@@ -135,6 +145,7 @@ def build(kind, title, wall_color, accent_color, door_width):
             box("LiftColumn", (x, 1.4, 0), (0.28, 2.8, 0.45), accent)
         for x in [-3, 0, 3]:
             box("ParkingBayLine", (x, 0.035, 0.4), (0.08, 0.01, 5.8), white, 0)
+    move_to_collection("DistrictModule")
     bpy.ops.object.select_all(action="SELECT")
     blend = SOURCE / (kind + ".blend")
     glb = OUTPUT / (kind + ".glb")

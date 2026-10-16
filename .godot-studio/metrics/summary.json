@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-16T10:44:37.474786+00:00",
+  "generated_at": "2026-10-16T11:18:56.270620+00:00",
   "authority": "studio-decision-kernel",
   "runtime_verified": false,
-  "episode_count": 4,
+  "episode_count": 5,
   "tokens": {
     "input_tokens": null,
     "output_tokens": null,
@@ -17,6 +17,11 @@
   "report": "docs/indicateurs/mesures.md",
   "recent_episodes": [
     {
+      "id": "ds-20261016-feedback",
+      "objective": "Finish FPS viewmodel combat feedback and original audio presentation",
+      "status": "COMPLETED"
+    },
+    {
       "id": "ds-20261016-district",
       "objective": "Integrate three authored FPS interiors and validate reachable objectives",
       "status": "COMPLETED"
@@ -25,13 +30,14 @@
       "id": "ds-20261016-art-anchor",
       "objective": "Adapt licensed zombie and pistol assets and verify FPS combat",
       "status": "COMPLETED"
-    },
-    {
-      "id": "ds-20261016-fps-core",
-      "objective": "Implement the complete first-person mission loop",
-      "status": "COMPLETED"
     }
   ],
-  "problem_refs": [],
+  "problem_refs": [
+    {
+      "id": "asset-sheet-preflight-01",
+      "episode": "ds-20261016-feedback",
+      "status": "RESOLVED"
+    }
+  ],
   "details": "Use explicit report/status limits and selected event paths; do not load all history"
 }

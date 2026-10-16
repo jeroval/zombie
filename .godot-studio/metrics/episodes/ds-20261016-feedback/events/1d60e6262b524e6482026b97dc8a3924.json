@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETED",
+  "summary": "FPS streetscape, mission props, viewmodel, combat feedback, original audio, French radio voice, persistent options and results integrated; final graphical input traversal wins in 135.88 seconds",
+  "next_action": "Measure representative graphical performance, tune observable hotspots, then build and validate the standalone Windows export",
+  "revision_end": {
+    "commit": "000a9b0cf5be51e726a0f18fca42bd2af43f975e",
+    "dirty": true
+  },
+  "unfinished_step_count": 0,
+  "acceptance": "SEE_CANONICAL_REVIEW",
+  "schema_version": 1,
+  "type": "finish",
+  "at": "2026-10-16T11:18:55.495665+00:00",
+  "event_id": "1d60e6262b524e6482026b97dc8a3924"
+}
