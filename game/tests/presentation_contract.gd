@@ -26,6 +26,8 @@ func run() -> void:
 	check(is_equal_approx(loaded.sensitivity, 1.45), "Sensitivity persists")
 	check(is_equal_approx(loaded.fov, 92.0), "FOV persists")
 	check(not loaded.shake, "Camera shake preference persists")
+	var impossible_result := Settings.record_result(loaded, 12.0, 2, true)
+	check(impossible_result.best_time == 0, "Impossible accelerated victory is not a record")
 	var first_result := Settings.record_result(loaded, 180.0, 12, true)
 	var slower_result := Settings.record_result(first_result, 240.0, 18, true)
 	check(is_equal_approx(slower_result.best_time, 180.0), "Slower victory preserves best time")

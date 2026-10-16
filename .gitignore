@@ -7,6 +7,7 @@ game/.godot/
 game/studio_fixtures/
 .godot-studio/machine.local.json
 .godot-studio/reports/
+dist/
 *.blend1
 *.blend2
 .env

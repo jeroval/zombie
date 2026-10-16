@@ -1,12 +1,12 @@
 # État du développement
 
-Mis à jour : 16 octobre 2026, 13 h 20 Europe/Paris. Vision DS-V2.
+Mis à jour : 16 octobre 2026, 13 h 25 Europe/Paris. Vision DS-V2.
 
 - **Objectif global** : livrer Dernier Signal complet et vérifié avant 18 h.
-- **Dernier résultat réel** : parcours FPS graphique gagnant après intégration des rues, objets de mission, mains, audio et retours de combat.
-- **Jalon actif** : M4, performance et réglages de jouabilité.
-- **Prochain résultat** : sonde graphique représentative, correction des points chauds, puis export Windows autonome.
-- **Branche** : `feat/fps-art-and-playability` ; boucle initiale conservée sur `feat/dernier-signal`.
+- **Dernier résultat réel** : sonde graphique à 35 infectés, p95 5,91 ms et 1 % bas 154,6 FPS sur RTX 4070 SUPER.
+- **Jalon actif** : M5, paquet Windows autonome.
+- **Prochain résultat** : export depuis une révision propre, lancement et parcours mission depuis l'exécutable.
+- **Branche** : `feat/fps-balance-and-release` ; jalon artistique conservé sur `feat/fps-art-and-playability`.
 - **Blocage global** : aucun constaté.
 - **Incertain** : rythme et durée cible pour un joueur humain, mixage sur d'autres systèmes audio, export autonome.
 
@@ -21,7 +21,7 @@ Mis à jour : 16 octobre 2026, 13 h 20 Europe/Paris. Vision DS-V2.
 | Assets et animations | Oui | Sources Blender, GLB, zombie animé et rendu encré | Import, canaux, poses et planches courantes | Revue agent faite ; acceptation créateur ouverte |
 | HUD, menus, options | Oui | HUD, pause, options et meilleurs résultats persistants | Contrat de présentation réussi | Menu 1152 × 648 inspecté |
 | Son et musique | Oui | Ambiance, effets et quatre voix françaises | Lecture réelle sur le backend audio | Mixage humain ouvert |
-| Build autonome | Oui | Non | Non | Non |
+| Build autonome | Oui | Preset, guide, notices et recette prêts | Export réel restant | Non |
 
 ## Reprise
 

@@ -111,3 +111,24 @@ graphique par entrées normales gagne en 135,88 s, santé 82, 34 neutralisations
 108 tirs. C'est une preuve agent reproductible, pas un playtest humain ni une
 acceptation artistique du créateur. M2 et M3 sont clos à ce niveau de preuve ;
 M4 doit maintenant mesurer les performances et corriger les défauts observables.
+
+## 13 h 25 — performance représentative et préparation Windows
+
+Une sonde graphique sans V-Sync a animé 35 infectés pendant 900 images après
+180 images de chauffe, en 1152 × 648 sur l'OpenGL de la RTX 4070 SUPER. Résultat :
+moyenne 4,28 ms, médiane 3,81 ms, p95 5,91 ms, p99 6,47 ms, 1 % bas calculé à
+154,6 FPS et aucune image au-dessus de 16,67 ms. La scène observée comptait
+3 160 appels de dessin et 1 034 540 primitives. Cette marge ne justifie pas une
+optimisation spéculative ; les autres GPU ne sont pas certifiés.
+
+Le menu de résultat a aussi été capturé dans sa fenêtre cible. Un test accéléré
+avait écrit un meilleur temps impossible à zéro seconde : la persistance refuse
+désormais tout temps sous les 90 secondes incompressibles de la défense et
+nettoie les anciennes valeurs invalides. L'écran complet, avec record, tient dans
+940 × 560 au sein de la fenêtre 1152 × 648.
+
+Le preset Windows x86_64, le guide joueur, les notices tierces et la recette de
+paquet sont prêts. Les notices Godot seront générées depuis le binaire exact ;
+Quaternius CC0 et la voix SIWIS CC BY 4.0 sont attribués. M4 est vérifié par les
+probes automatisées. Le rythme et le plaisir humains restent ouverts ; M5 doit
+encore produire puis tester l'exécutable réel.

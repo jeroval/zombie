@@ -2,6 +2,7 @@ extends RefCounted
 
 const PATH := "user://settings.cfg"
 const VERSION := 1
+const MIN_VALID_RESULT_SECONDS := 90.0
 const DEFAULTS := {
 	"master": 0.85,
 	"music": 0.35,
@@ -29,6 +30,8 @@ static func load_file(path := PATH) -> Dictionary:
 	values.shake = bool(config.get_value("video", "shake", values.shake))
 	values.fullscreen = bool(config.get_value("video", "fullscreen", values.fullscreen))
 	values.best_time = maxf(float(config.get_value("results", "best_time", values.best_time)), 0)
+	if values.best_time > 0 and values.best_time < MIN_VALID_RESULT_SECONDS:
+		values.best_time = 0.0
 	values.best_kills = maxi(int(config.get_value("results", "best_kills", values.best_kills)), 0)
 	return values
 
@@ -49,6 +52,6 @@ static func record_result(values: Dictionary, elapsed: float, kills: int, won: b
 	var updated := values.duplicate()
 	updated.best_kills = maxi(int(updated.get("best_kills", 0)), kills)
 	var previous := float(updated.get("best_time", 0))
-	if won and (previous <= 0 or elapsed < previous):
+	if won and elapsed >= MIN_VALID_RESULT_SECONDS and (previous <= 0 or elapsed < previous):
 		updated.best_time = elapsed
 	return updated

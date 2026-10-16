@@ -1,0 +1,10 @@
+{
+  "step_id": "f797248c0c664723a687a826925e2c61",
+  "label": "representative-35-enemy-performance",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:20:56.217280+00:00",
+  "event_id": "fea4f787d4fb4338b06758253d35b72e"
+}
