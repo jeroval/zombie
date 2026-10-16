@@ -1,0 +1,10 @@
+{
+  "step_id": "f75cf809901a43f68ddc9abe410ccbb2",
+  "label": "shared-mission-driver-source",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:31:39.948880+00:00",
+  "event_id": "888aedab42304c3b866703173306246f"
+}

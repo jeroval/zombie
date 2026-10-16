@@ -40,10 +40,49 @@ func _ready() -> void:
 	create_session()
 	apply_settings()
 	show_menu("DERNIER SIGNAL", "Commencer")
+	var validation_report := release_validation_report()
+	if validation_report:
+		start_release_validation.call_deferred(validation_report)
 
 func _exit_tree() -> void:
 	if is_instance_valid(audio):
 		audio.shutdown()
+
+func release_validation_report() -> String:
+	const prefix := "--automated-traversal-report="
+	for argument in OS.get_cmdline_user_args():
+		if argument.begins_with(prefix):
+			return argument.substr(prefix.length())
+	return ""
+
+func start_release_validation(report_path: String) -> void:
+	if DisplayServer.get_name() == "headless":
+		push_error("Automated traversal needs the graphical backend")
+		get_tree().quit(2)
+		return
+	var driver = load("res://tests/mission_driver.gd").new()
+	add_child(driver)
+	driver.completed.connect(func(result: Dictionary): finish_release_validation.call_deferred(result, report_path))
+	driver.begin(self)
+
+func finish_release_validation(result: Dictionary, report_path: String) -> void:
+	print("EXPORTED_INPUT_RUN_RESULT ", JSON.stringify(result))
+	var report := FileAccess.open(report_path, FileAccess.WRITE)
+	if report == null:
+		push_error("Cannot save exported traversal evidence")
+		get_tree().quit(1)
+		return
+	report.store_string(JSON.stringify(result, "\t"))
+	report.close()
+	await get_tree().process_frame
+	await RenderingServer.frame_post_draw
+	var capture_path := report_path.get_basename() + ".png"
+	if get_viewport().get_texture().get_image().save_png(capture_path) != OK:
+		push_error("Cannot save exported traversal capture")
+		get_tree().quit(1)
+		return
+	audio.shutdown()
+	get_tree().quit(0 if result.pass else 1)
 
 func configure_inputs() -> void:
 	var bindings := {"forward": [KEY_W, KEY_Z, KEY_UP], "back": [KEY_S, KEY_DOWN], "left": [KEY_A, KEY_Q, KEY_LEFT], "right": [KEY_D, KEY_RIGHT], "sprint": [KEY_SHIFT], "reload": [KEY_R], "interact": [KEY_E], "heal": [KEY_F], "melee": [KEY_V]}
