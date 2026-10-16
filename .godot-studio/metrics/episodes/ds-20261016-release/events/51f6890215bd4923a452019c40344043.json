@@ -1,0 +1,14 @@
+{
+  "step_id": "8607eecf2f7a491cb64b275aee38e72f",
+  "label": "windows-release-package-retry",
+  "phase": "integration",
+  "work_kind": "FAILURE_DEMAND",
+  "status": "PASS",
+  "returncode": 0,
+  "duration_s": 12.016,
+  "measurement": "MONOTONIC_PROCESS_ELAPSED",
+  "schema_version": 1,
+  "type": "step_finished",
+  "at": "2026-10-16T11:26:03.800169+00:00",
+  "event_id": "51f6890215bd4923a452019c40344043"
+}

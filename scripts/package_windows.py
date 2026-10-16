@@ -16,6 +16,7 @@ from studio import GAME, ROOT, resolve_tool, run_checked
 DIST_ROOT = ROOT / "dist"
 BUNDLE = DIST_ROOT / "Dernier-Signal"
 EXECUTABLE = BUNDLE / "Dernier-Signal.exe"
+CONSOLE_EXECUTABLE = BUNDLE / "Dernier-Signal.console.exe"
 ARCHIVE = DIST_ROOT / "Dernier-Signal-windows-x86_64.zip"
 
 
@@ -62,6 +63,7 @@ def package() -> dict:
     BUNDLE.mkdir(parents=True, exist_ok=True)
     for path in (
         EXECUTABLE,
+        CONSOLE_EXECUTABLE,
         BUNDLE / "GODOT_COPYRIGHT.txt",
         BUNDLE / "GUIDE_JOUEUR.md",
         BUNDLE / "THIRD_PARTY_NOTICES.md",
@@ -110,6 +112,8 @@ def package() -> dict:
         BUNDLE / "GUIDE_JOUEUR.md",
         BUNDLE / "THIRD_PARTY_NOTICES.md",
     ]
+    if CONSOLE_EXECUTABLE.is_file():
+        files.append(CONSOLE_EXECUTABLE)
     manifest = {
         "schema_version": 1,
         "game": "Dernier Signal",
