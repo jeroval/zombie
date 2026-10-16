@@ -50,8 +50,15 @@ def remove_previous_file(path: Path) -> None:
 
 def package() -> dict:
     dirty = git("status", "--porcelain", "--untracked-files=normal")
-    if dirty:
-        raise RuntimeError("Commit or discard source changes before packaging:\n" + dirty)
+    source_changes = []
+    for line in dirty.splitlines():
+        path = line[3:].replace("\\", "/")
+        if not path.startswith(".godot-studio/metrics/episodes/"):
+            source_changes.append(line)
+    if source_changes:
+        raise RuntimeError(
+            "Commit or discard source changes before packaging:\n" + "\n".join(source_changes)
+        )
     BUNDLE.mkdir(parents=True, exist_ok=True)
     for path in (
         EXECUTABLE,
