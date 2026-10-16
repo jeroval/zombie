@@ -158,3 +158,17 @@ La mesure GAC a aussi révélé que `metrics run` crée son événement avant d'
 la commande observée. L'empaqueteur accepte donc uniquement ces nouveaux
 événements append-only comme bruit de mesure et continue de refuser toute vraie
 modification produit. La proposition GAC-I11 formalise un contrat plus propre.
+
+## 14 h 08 — recompilation Windows demandée
+
+Godot avait normalisé les deux imports de textures 3D vers la compression VRAM
+et réécrit `project.godot` depuis l'éditeur. Les contrats gameplay et présentation
+ont réussi avec cet état, conservé dans le commit `62ece35`. L'export release a
+ensuite été recréé depuis ce commit propre et son lancement autonome a réussi.
+
+Le nouveau ZIP mesure 42 481 546 octets et son SHA-256 est
+`3b406168b9eb109f87d118648bb51c45b7663516ec11aa8f0c6ce9580650199c`.
+Le parcours complet de ce build précis a de nouveau réussi en 135,88 s, avec
+trois composants, 82 points de vie, 34 neutralisations et 108 tirs. La preuve
+visuelle et le manifeste ont été actualisés ; les limites humaines et la signature
+Authenticode restent inchangées.
