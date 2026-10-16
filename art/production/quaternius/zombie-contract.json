@@ -1,9 +1,0 @@
-{
-  "schema_version": 1,
-  "meshes": [
-    {"name": "Cube.000", "godot_node": "Zombie", "attributes": ["POSITION", "NORMAL", "TEXCOORD_0", "JOINTS_0", "WEIGHTS_0"], "skinned": true},
-    {"name": "Cube.004", "godot_node": "Eyelid", "attributes": ["POSITION", "NORMAL", "TEXCOORD_0", "JOINTS_0", "WEIGHTS_0"], "skinned": true},
-    {"name": "Zombie_StructuralInk", "attributes": ["POSITION", "NORMAL", "JOINTS_0", "WEIGHTS_0"], "skinned": true}
-  ],
-  "animated_nodes": ["Head", "Hips", "UpperArm.L", "UpperLeg.L"]
-}

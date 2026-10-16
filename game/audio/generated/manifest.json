@@ -2,7 +2,7 @@
   "schema_version": 1,
   "author": "Project original, generated deterministically",
   "license": "Project original",
-  "generator": "scripts/build_audio.py",
+  "generator": "deterministic local synthesis recipe",
   "seed": 7319,
   "assets": [
     {

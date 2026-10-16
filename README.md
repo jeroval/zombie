@@ -1,33 +1,24 @@
 # Dernier Signal
 
-FPS 3D de survie en français. Explorez un quartier contaminé, récupérez trois
-composants, réparez la radio, survivez à l'assaut puis rejoignez l'extraction.
+**Dernier Signal** est un FPS 3D de survie en français pour Windows x86_64.
+Explorez un quartier contaminé, récupérez trois composants, réparez la radio,
+survivez à l'assaut puis rejoignez l'extraction.
 
-Le jeu se joue à la première personne avec souris et clavier. Le guide complet,
-les commandes et les options sont dans [le guide joueur](docs/PLAYER_GUIDE.md).
+## Télécharger et jouer
 
-## Télécharger le jeu
+[Télécharger Dernier-Signal.zip](https://raw.githubusercontent.com/jeroval/zombie/main/Dernier-Signal.zip)
 
-La version Windows x86_64 est disponible dans la
-[release Dernier Signal 1.0.0](https://github.com/jeroval/zombie/releases/tag/v1.0.0).
-Télécharger puis décompresser l'archive complète afin de conserver l'exécutable
-et `Dernier-Signal.pck` dans le même dossier. Cette version n'est pas signée avec
-Authenticode ; l'empreinte SHA-256 est fournie avec la release.
+1. Décompresser toute l'archive.
+2. Conserver `Dernier-Signal.exe` et `Dernier-Signal.pck` dans le même dossier.
+3. Lancer `Dernier-Signal.exe`.
 
-Pour lancer le projet depuis l'éditeur :
+L'exécutable n'est pas signé avec Authenticode. Le guide des commandes et des
+options est disponible dans [le guide joueur](docs/PLAYER_GUIDE.md).
 
-```powershell
-uv sync --locked
-uv run --locked python scripts/studio.py doctor
-uv run --locked python scripts/studio.py open
-```
+## Projet Godot
 
-Créer le paquet Windows après avoir validé et commité les sources :
+Les sources directement utilisées par le jeu sont dans `game/`. Ouvrir
+`game/project.godot` avec Godot 4.7.2 pour lancer ou modifier le projet.
 
-```powershell
-uv run --locked python scripts/package_windows.py
-```
-
-Commandes, MCP, routes 3D et validations : [guide du studio](docs/STUDIO.md).
-Roadmap et limites de preuve : [roadmap](docs/ROADMAP.md).
-
+Les composants tiers et leurs licences sont recensés dans
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

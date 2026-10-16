@@ -1,9 +1,9 @@
 # Audio de Dernier Signal
 
-Les dix sons sous `generated/` sont originaux et reproductibles par
-`scripts/build_audio.py` : tir, clic vide, recharge, mêlée, impact, blessure,
-collecte, radio, extraction et ambiance de 45 secondes. Stéréo PCM, 48 kHz,
-seed 7319 ; durées, pics et empreintes sont dans `generated/manifest.json`.
+Les dix sons sous `generated/` sont originaux : tir, clic vide, recharge, mêlée,
+impact, blessure, collecte, radio, extraction et ambiance de 45 secondes.
+Ils sont en PCM stéréo 48 kHz ; durées, pics et empreintes sont conservés dans
+`generated/manifest.json`.
 
 Les quatre messages radio français sous `voice/` ont été synthétisés localement
 avec Piper 1.8.0, voix `siwis`, locuteur 0, length scale 1,08. Le catalogue voix
