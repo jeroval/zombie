@@ -1,0 +1,19 @@
+# Pistes d'amélioration du plugin
+
+Statut initial : **propositions**, aucune modification du plugin installée.
+Les exemples du bootstrap sont des observations de cette session précédente,
+pas des mesures comparatives de gain. À enrichir aux jalons avec preuves réelles.
+
+| ID | Priorité | Constat / attribution | Proposition | Vérification avant/après |
+| --- | --- | --- | --- | --- |
+| GAC-I01 | Haute | Le scaffold MCP utilise la clé cache ffmpeg pour résoudre ffprobe ; inspection du template 3.38.0 | Résoudre ffprobe par sa propre clé puis à côté de ffmpeg | Test avec deux exécutables distincts, lecture JSON d'un WAV réel |
+| GAC-I02 | Haute | Le scaffold audio emploie `-y` et un chemin de sortie libre ; inspection source | Refuser l'écrasement, borner formats/fréquences et protocoles | Fichier existant intact, chemin sortant refusé, WAV→Ogg réussi |
+| GAC-I03 | Moyenne | Session GAC 3.38.0 et miroir CLI local 3.27.0 coexistent | Diagnostic de provenance/version par surface, sans mise à jour silencieuse | Deux installations simulées ; afficher celle effectivement exécutée |
+| GAC-I04 | Moyenne | Le doctor scaffold considère une inscription contenant `gac-local-studio` comme preuve générique | Vérifier le nom exact, le projet, la commande et un vrai initialize/list_tools | Deux jeux inscrits ; un serveur cassé doit rester distinct de celui qui marche |
+| GAC-I05 | Moyenne | Import implicite `.blend` échoue sans préférence Blender configurée dans Godot | Scaffold sources hors runtime, GLB explicite, politique d'import documentée | Projet neuf : export/import sans dépendre des préférences de l'éditeur |
+| GAC-I06 | À mesurer | Plusieurs entrées CLI/skills ont des syntaxes différentes | Aide unique de capacités et exemples exécutables testés | Exécuter les exemples documentés dans un projet temporaire |
+
+Gain attendu : moins de diagnostic et de configuration incohérente. **Gain non
+mesuré**. Aucun pourcentage de temps ou de tokens n'est attribué à ces propositions.
+Les incidents futurs distingueront cause confirmée, probable et inconnue, défaut
+du projet, défaut du provider et défaut du plugin.

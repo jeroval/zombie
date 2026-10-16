@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "episode_id": "ds-20261016-design",
+  "objective": "Définir le jeu complet, les jalons et les mesures avant production",
+  "outcome_id": "DS-FOUNDATION",
+  "category": "design",
+  "owner": "studio-decision-kernel",
+  "model": "GPT-6",
+  "comparison_group": "UNKNOWN",
+  "cache_state": "WARM",
+  "plugin_version": "3.38.0",
+  "started_at": "2026-10-16T10:13:00.406163+00:00",
+  "revision_start": {
+    "commit": "fb2652ca054f34c05b3dda3cb879acfc43e73e90",
+    "dirty": false
+  },
+  "contract_ref": null,
+  "continuation_of": null,
+  "measurement": "WALL_CLOCK",
+  "token_coverage": "UNKNOWN_UNTIL_EXPLICIT_IMPORT"
+}
