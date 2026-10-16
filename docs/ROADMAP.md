@@ -6,7 +6,7 @@ Responsable : Codex. Contrat produit : [conception](conception/01-concept.md).
 
 ## Produit à livrer
 
-Un jeu Windows autonome de survie/action 3D isométrique : explorer un quartier
+Un jeu Windows autonome de survie/action FPS 3D à la première personne : explorer un quartier
 envahi, récupérer trois composants, réparer une radio, survivre à l'arrivée des
 secours, puis rejoindre l'extraction. Une partie complète visée de 8 à 12 minutes,
 avec un début guidé, une progression, un climax, une victoire ou défaite et une

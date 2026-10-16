@@ -6,7 +6,8 @@ assets et vérifications ; l'exécutable final ne dépend pas de ces outils.
 ## Responsabilités prévues
 
 - `Game` : état de partie, phases, collecte garantie et conditions victoire/défaite.
-- `Player` : déplacement, visée, combat, endurance, santé et inventaire court.
+- `Player` : CharacterBody3D, rotation horizontale, caméra/pitch borné,
+  déplacement relatif au regard, arme de première personne, combat et ressources.
 - `Enemy` : perception, chemin, attaque et réactions ; variantes configurées par données.
 - `World` : carte, obstacles, placements et points d'apparition ; aucun état global caché.
 - `HUD` : menus, objectifs, retours, pause et paramètres ; commandes transmises au jeu.

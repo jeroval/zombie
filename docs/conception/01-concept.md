@@ -62,16 +62,18 @@ performance. Le dernier objectif est de rejoindre la zone d'extraction en vie.
 
 ## Présentation et contrôles
 
-Vue isométrique 3D, caméra souple qui suit le joueur, visée souris sur le sol.
+Direction imposée par le créateur : FPS 3D. Caméra à hauteur des yeux,
+regard souris capturé en partie, arme visible et réticule central.
 Clavier ZQSD et WASD, flèches comme alternative ; clic gauche tir, clic droit
-mêlée, R recharge, E interaction, Maj sprint, F soin, Échap pause. Afficher les
+visée précise, V mêlée, R recharge, E interaction, Maj sprint, F soin, Échap pause. Afficher les
 commandes contextuelles. Le remappage exhaustif et la manette ne sont pas
 promis dans cette version ; privilégier un clavier français réellement utilisable.
 
 HUD : santé, endurance, chargeur/réserve, soins, phase et progression de mission.
 Marqueurs distincts par forme/texte, pas uniquement par couleur. Carte ou repères
 directionnels pour éviter les recherches à l'aveugle. Aide consultable en pause.
-Options volumes, plein écran et secousses caméra ; persistance locale.
+Options volumes, plein écran, sensibilité souris, champ de vision et secousses
+caméra ; persistance locale.
 
 ## Livrable et limites définies avant production
 

@@ -33,7 +33,9 @@ de jeu approuvés. Blender conserve les sources adaptées ; GLB pour Godot.
 
 Budgets indicatifs à valider au rendu : acteur 3–12 k triangles, objet courant
 0,2–4 k, véhicule 3–15 k, bâtiment 3–20 k ; atlas 1024–2048 pour les familles.
-Caméra de jeu à environ 15–22 m, acteurs lisibles sur 60–120 px en 1080p.
+Caméra FPS à 1,65 m, champ de vision initial 85 degrés. Vérifier les modèles
+à portée de mêlée et au loin. Arme et mains visibles au premier plan, avec
+animations de tir, recharge et mêlée ; contours fins pour la lecture rapprochée.
 Au plus 40–60 infectés actifs selon mesures. Les effets doivent rester sobres
 et conserver leurs informations quand la caméra tremble est désactivée.
 
