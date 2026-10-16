@@ -40,7 +40,7 @@ n'installe pas le studio graphique ni les modèles sur les runners.
 | Stable Fast 3D | Imports des extensions, calcul CUDA et empreintes des modèles vérifiés ; génération complète non relancée |
 | UniRig | Imports, FlashAttention effectivement exécuté sur CUDA et empreintes des modèles vérifiés ; rig complet non relancé |
 | GPU | RTX 4070 SUPER, 12 Go ; environ 10 Go libres au contrôle initial, valeur à revérifier avant un travail lourd |
-| Git / Git LFS / VS Code / Codex | Commandes de version réussies ; remote GitHub `origin` accessible en lecture ; aucun push effectué |
+| Git / Git LFS / VS Code / Codex | Commandes de version réussies ; `main` synchronisée avec `origin` ; release Windows `v1.0.0` publiée |
 | MCP zombie | Six outils listés, appels réels Blender/Godot et rejet d'un chemin hors dépôt testés en stdio |
 | MCP Tripo | Solde interrogé : 0 crédit, génération cloud indisponible |
 
