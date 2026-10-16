@@ -1,0 +1,14 @@
+{
+  "step_id": "18520ebf3852498fb77cc436fac4a472",
+  "label": "windows-release-package",
+  "phase": "integration",
+  "work_kind": "VALUE",
+  "status": "FAIL",
+  "returncode": 1,
+  "duration_s": 0.109,
+  "measurement": "MONOTONIC_PROCESS_ELAPSED",
+  "schema_version": 1,
+  "type": "step_finished",
+  "at": "2026-10-16T11:25:32.446232+00:00",
+  "event_id": "47f5b0bb29034f39ab6ceea4498faeb7"
+}

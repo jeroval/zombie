@@ -1,0 +1,31 @@
+{
+  "issue_id": "metrics-clean-worktree-01",
+  "fingerprint": "metrics-run-mutates-before-command",
+  "symptom": "L'empaqueteur a refusé un dépôt initialement propre lorsqu'il était exécuté sous metrics run.",
+  "cause": "metrics run écrit son événement de démarrage dans le dépôt avant de lancer la commande mesurée.",
+  "confidence": "CONFIRMED",
+  "origin": "INTRODUCED",
+  "attribution": "PLUGIN",
+  "scope": "MILESTONE",
+  "owner": "studio-decision-kernel",
+  "affected_nodes": ["m5-windows-package"],
+  "status": "RESOLVED",
+  "next_action": "Conserver l'exclusion bornée aux nouveaux événements append-only et refuser toute modification source réelle.",
+  "evidence_refs": [
+    "scripts/package_windows.py",
+    "docs/indicateurs/release-windows.json"
+  ],
+  "solutions": [
+    {
+      "id": "ignore-current-episode-events-only",
+      "change": "Autoriser uniquement les événements non suivis sous le répertoire métrique de l'épisode pendant le contrôle de propreté.",
+      "status": "VERIFIED",
+      "verification_kind": "Paquet produit depuis une révision produit propre, manifeste et parcours exporté réussis",
+      "evidence_refs": [
+        "scripts/package_windows.py",
+        "dist/Dernier-Signal/BUILD_MANIFEST.json",
+        "docs/indicateurs/parcours-fps-export.json"
+      ]
+    }
+  ]
+}

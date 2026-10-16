@@ -1,0 +1,10 @@
+{
+  "step_id": "afad4793b6004b24b1dced8e5c9b37d3",
+  "label": "windows-release-with-console",
+  "phase": "integration",
+  "work_kind": "FAILURE_DEMAND",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:27:53.294740+00:00",
+  "event_id": "7a472488d5074fce852c250ac0f0e151"
+}

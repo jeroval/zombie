@@ -1,0 +1,24 @@
+{
+  "improvement_id": "asset-sheet-preflight",
+  "priority": "P2",
+  "scope": "PLUGIN_CANDIDATE",
+  "problem": "Deux préconditions de rendu de planche ont été découvertes l'une après l'autre pendant l'exécution.",
+  "target": "Route GAC asset-sheet render et sa documentation de préparation.",
+  "proposal": "Vérifier avant Blender la collection demandée, la disponibilité de Pillow et le caractère disponible de la sortie, puis retourner toutes les erreurs ciblées ensemble.",
+  "expected_gain": "Hypothèse : moins de relances de rendu sans réduire la qualité ou les contrôles requis.",
+  "validation_plan": "Comparer la même source sans collection, sans Pillow puis conforme ; mesurer le nombre de lancements Blender et vérifier que la planche conforme reste identique.",
+  "issue_ids": [
+    "asset-sheet-preflight-01"
+  ],
+  "evidence_refs": [
+    {
+      "path": "docs/indicateurs/incident-planche-assets.json",
+      "sha256": "f3a7f7ab0381fee70b25bf8310596aeb7d4f8b3853219380cff8dfb39b6e145d"
+    }
+  ],
+  "status": "PROPOSED",
+  "schema_version": 1,
+  "type": "improvement",
+  "at": "2026-10-16T11:18:48.979406+00:00",
+  "event_id": "73bde3705e774cfaac190ce0bdde0066"
+}

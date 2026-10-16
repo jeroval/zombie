@@ -1,0 +1,10 @@
+{
+  "step_id": "034caecfbff841b7ab81c85d5026e1e7",
+  "label": "exported-gameplay-contract",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:26:09.790997+00:00",
+  "event_id": "63b8de8bbfd94fcda029020eacdc3355"
+}

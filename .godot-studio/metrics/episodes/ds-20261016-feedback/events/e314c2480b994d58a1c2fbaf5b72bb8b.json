@@ -1,0 +1,10 @@
+{
+  "step_id": "03a28ec42f5147a689f2eeb2c8a383b8",
+  "label": "final-fps-input-traversal",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:13:02.054513+00:00",
+  "event_id": "e314c2480b994d58a1c2fbaf5b72bb8b"
+}

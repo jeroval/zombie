@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "author": "Project original, generated deterministically",
+  "license": "Project original",
+  "generator": "scripts/build_audio.py",
+  "seed": 7319,
+  "assets": [
+    {
+      "file": "game\\audio\\generated\\pistol_shot.wav",
+      "duration_seconds": 0.34,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.9633402547171337,
+      "sha256": "719568c5cce8a6f2d44a1ce8a710fbed08ac35874660b4ed6b40ba3e93655290"
+    },
+    {
+      "file": "game\\audio\\generated\\empty_click.wav",
+      "duration_seconds": 0.11,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.39338720883347245,
+      "sha256": "0978d6ee228939643fb867999bb60add349292a7090458eec472d8b27abc6c1c"
+    },
+    {
+      "file": "game\\audio\\generated\\reload.wav",
+      "duration_seconds": 1.18,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.3589573679180664,
+      "sha256": "21b59b862c681266465d830785c8f293c6ea5a4fc85189805722c82fc69e0410"
+    },
+    {
+      "file": "game\\audio\\generated\\melee_swing.wav",
+      "duration_seconds": 0.3,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.13844672930983912,
+      "sha256": "f341d3db8c83572d978c342e8db9b5a7c9df6e1aed6754d8b2557150f7814bfd"
+    },
+    {
+      "file": "game\\audio\\generated\\hit_enemy.wav",
+      "duration_seconds": 0.18,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.531866795241267,
+      "sha256": "8d95621d58c4ae1d002046ed459d501c942fcd3ae0a9159bc35bf4f421c29ca4"
+    },
+    {
+      "file": "game\\audio\\generated\\hurt.wav",
+      "duration_seconds": 0.42,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.36825550491821357,
+      "sha256": "dfd256c98d9d453ae5b5600177d028ae41f62a4e186df8436ea4e2c046208b79"
+    },
+    {
+      "file": "game\\audio\\generated\\pickup.wav",
+      "duration_seconds": 0.42,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.19970002532765083,
+      "sha256": "00b28c62f359e2ddae0c27265fb84078a7ccda4be4a3d07e052204e3bf3b3705"
+    },
+    {
+      "file": "game\\audio\\generated\\radio_on.wav",
+      "duration_seconds": 0.85,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.2138817169303955,
+      "sha256": "fd2256dbf7347e7df01479905b7a753f75ec0f5c17d4beb79b49f438db5713ad"
+    },
+    {
+      "file": "game\\audio\\generated\\extract.wav",
+      "duration_seconds": 1.35,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.31605428851974854,
+      "sha256": "c457debaa2f353e623e5c829c78db701782d0a24f5b92f8f2a4ebcd27ae94790"
+    },
+    {
+      "file": "game\\audio\\generated\\empty_city_loop.wav",
+      "duration_seconds": 45.0,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "peak": 0.14187258564168356,
+      "sha256": "cbb21b5084c9c25a3cf53a4661d69a4a58c0690992b97a949ad76a29a582834f"
+    }
+  ]
+}

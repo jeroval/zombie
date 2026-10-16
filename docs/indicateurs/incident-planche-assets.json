@@ -1,0 +1,34 @@
+{
+  "issue_id": "asset-sheet-preflight-01",
+  "fingerprint": "asset-sheet-preconditions-late",
+  "symptom": "La première planche multivue a échoué successivement sur une collection absente puis sur Pillow absent.",
+  "cause": "Les scripts du projet n'exposaient pas de collection nommée et la dépendance d'assemblage d'image n'était pas déclarée.",
+  "confidence": "CONFIRMED",
+  "origin": "INTRODUCED",
+  "attribution": "PROJECT",
+  "scope": "MILESTONE",
+  "owner": "studio-decision-kernel",
+  "affected_nodes": ["m2-asset-review"],
+  "status": "RESOLVED",
+  "next_action": "Conserver les collections explicites et la dépendance verrouillée lors des reconstructions.",
+  "evidence_refs": [
+    "scripts/build_viewmodel.py",
+    "pyproject.toml",
+    "art/production/viewmodel/fps_arms.views.json"
+  ],
+  "solutions": [
+    {
+      "id": "declare-sheet-prerequisites",
+      "change": "Créer une collection nommée dans chaque source et verrouiller Pillow dans les dépendances de développement.",
+      "status": "VERIFIED",
+      "verification_kind": "Cinq planches multivues rendues et contrôlées courantes",
+      "evidence_refs": [
+        "art/production/viewmodel/fps_arms.views.json",
+        "art/production/quaternius/zombie_basic.views.json",
+        "art/production/district/clinic.views.json",
+        "art/production/mission-props/radio_console.views.json",
+        "art/production/streetscape/streetscape.views.json"
+      ]
+    }
+  ]
+}

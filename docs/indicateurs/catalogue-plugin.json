@@ -1,0 +1,230 @@
+{
+  "plugin_version": "3.38.0",
+  "snapshot_date": "2026-10-16",
+  "scope": "All canonical development KPI fields and player-quality measures; art pillars and production-cost dimensions are separate acceptance inputs",
+  "sources": [
+    {
+      "path": "scripts/studio_metrics.py",
+      "sha256": "2942a2c2aa561209938c00543b02eaffa3503e39e056e54b36285429c556be6b"
+    },
+    {
+      "path": "skills/development-observability/references/development-metrics.md",
+      "sha256": "42dd3ebbb9a2a9fb348798a81ace3fe83badfb12f435780b269e3a623e41a0e3"
+    },
+    {
+      "path": "skills/development-observability/references/player-quality-measures.md",
+      "sha256": "39c0e4a417bf5932e6096d227dccd466f4f5ccf345f2f3ee188b8e20f2964ae2"
+    },
+    {
+      "path": "skills/asset-production-cost-model/SKILL.md",
+      "sha256": "6ad46d8cce01035e9a34d64262546a93df041c00a534001686838ba16feb0f14"
+    },
+    {
+      "path": "skills/project-visual-profile/references/comic-style-policy.json",
+      "sha256": "e5b7e35f419b4e5f210e842261bb3c140dc238f23c85dfe4b2b626223348ca83"
+    }
+  ],
+  "metric_fields": {
+    "token_totals": [
+      "input_tokens",
+      "output_tokens",
+      "cached_input_tokens",
+      "captured_turns",
+      "episode_coverage_percent"
+    ],
+    "aggregate": [
+      "schema_version",
+      "generated_at",
+      "authority",
+      "evidence_class",
+      "runtime_verified",
+      "episode_count",
+      "episodes_with_tokens",
+      "tokens",
+      "episode_wall_seconds_sum",
+      "process_seconds_sum",
+      "duration_note",
+      "rework_process_share_percent",
+      "classified_process_coverage_percent",
+      "declared_outcomes",
+      "declared_criteria",
+      "first_pass_percent",
+      "first_pass_denominator",
+      "open_problems",
+      "introduced_problems",
+      "preexisting_problems",
+      "unknown_origin_problems",
+      "solution_verified_percent",
+      "solution_attempt_count",
+      "recurrences",
+      "phase_costs",
+      "top_slow_steps",
+      "top_token_episodes",
+      "episodes",
+      "omitted_episodes",
+      "problems",
+      "omitted_problems",
+      "improvements",
+      "omitted_improvements",
+      "cohorts",
+      "reviews"
+    ]
+  },
+  "definition_tables": {
+    "skills/development-observability/references/development-metrics.md": [
+      [
+        "KPI",
+        "Definition and limitation"
+      ],
+      [
+        "Episode duration",
+        "UTC finish minus start. Includes waits; not thinking time or active human work. Interrupted/open episodes stay explicit."
+      ],
+      [
+        "Step duration",
+        "Monotonic elapsed time of an actually executed command. Summed parallel steps can exceed episode wall time."
+      ],
+      [
+        "Phase cost",
+        "Sum measured command seconds and imported token deltas assigned to that phase. Missing coverage is explicit."
+      ],
+      [
+        "Tokens",
+        "Input/output per completed Codex exec turn, with cached input a subset of input. Unknown is null, never zero."
+      ],
+      [
+        "Coverage",
+        "Imported turn count and episodes with counters. Total episode token coverage stays unknown without a complete harness census."
+      ],
+      [
+        "Rework",
+        "FAILURE_DEMAND seconds / classified command seconds; show classification coverage over all measured commands. UNKNOWN is excluded from the denominator. Not a ratio of all development time."
+      ],
+      [
+        "First pass",
+        "First decisive SATISFIED / contracts+revisions with a decisive SATISFIED or REJECTED review. PENDING/NOT_RUN are not failures. Continuations keep the same contract identity."
+      ],
+      [
+        "Acceptance/rules",
+        "Counts of canonical declared criteria/verdicts at recorded revisions. This is neither visual scoring nor a percentage of every rule in the plugin."
+      ],
+      [
+        "Problems",
+        "Open count, occurrence age/duration since recording (not the true age of a preexisting defect), recurrence by fingerprint, introduced/preexisting/unknown origin counts. These are declared incidents, not a count of all stderr lines."
+      ],
+      [
+        "Solutions",
+        "Declared VERIFIED / attempted solutions (TRIED, VERIFIED, REJECTED); planned fixes are excluded. Hash freshness is shown separately from historical success."
+      ],
+      [
+        "Trends",
+        "Recent episodes plus explicit comparable cohorts; median, sample count, P90 only at n>=10. No causal gain or statistical significance inferred."
+      ]
+    ],
+    "skills/development-observability/references/player-quality-measures.md": [
+      [
+        "Question",
+        "Measure",
+        "Interpretation boundary"
+      ],
+      [
+        "Can a first-time player begin meaningfully?",
+        "Unassisted relevant actions / first attempts started; show x/n, failures, withdrawals and missing observations.",
+        "Success can be accidental. Separate help from in-game accessible controls."
+      ],
+      [
+        "Is accidental friction reduced?",
+        "Defined start-to-action durations; show individual values or distribution, sample n and attempts with no result by observation end.",
+        "Never hide unsuccessful attempts behind a median of successes. Faster is not always better."
+      ],
+      [
+        "Was a rule reused?",
+        "Transfer successes / observed transfer attempts, with new context and help received.",
+        "A scripted bot already knows the rule; a returning participant is not a fresh novice."
+      ],
+      [
+        "Can play resume?",
+        "Recoveries / observed attempts for the named interruption/error condition.",
+        "Do not pool menu return, load and death as interchangeable conditions."
+      ],
+      [
+        "Does assistance support autonomy?",
+        "Help level, request/intervention timing, recovery; preserve player comments separately.",
+        "Dwell or detour alone cannot diagnose confusion. Help use is not failure."
+      ],
+      [
+        "Does the interface work?",
+        "Blocking input/focus/return errors per executed task, device and build.",
+        "A static image or declaration cannot establish runtime behavior."
+      ],
+      [
+        "What did the change teach development?",
+        "Problem-to-decision delay, open issue age, cycles without criterion progress or material uncertainty reduction.",
+        "A useful rejected hypothesis is progress; fast wrong decisions are not."
+      ]
+    ]
+  },
+  "art_policy": {
+    "id": "gac.inked-comic-3d",
+    "revision": 1,
+    "pillars": [
+      {
+        "id": "shape_language",
+        "requirement": "Drawn primary/secondary forms, recognizable silhouettes and coherent proportions across asset families."
+      },
+      {
+        "id": "geometry_budget",
+        "requirement": "Controlled mid-poly workflow with recorded projected-size budgets and measured imported geometry, materials, textures and LOD behavior."
+      },
+      {
+        "id": "painted_color_masses",
+        "requirement": "Broad readable local-color masses and restrained illustrated surface detail; photo sources must be adapted."
+      },
+      {
+        "id": "surface_ink",
+        "requirement": "Editable black or near-black interior strokes tied to anatomy, folds, seams, grain, assembly, veins or wear; a contour shader alone cannot satisfy this."
+      },
+      {
+        "id": "black_contours",
+        "requirement": "Shared black or tinted near-black contour hierarchy, calibrated by projected size, distance and asset role using the unified theme."
+      },
+      {
+        "id": "toon_light_values",
+        "requirement": "Three dominant stylized diffuse value groups with controlled transitions and subordinate fill; preserve the unified theme under actual scene lighting."
+      },
+      {
+        "id": "family_coherence",
+        "requirement": "One common form, color, ink and lighting grammar across characters, props, vehicles, buildings and vegetation, without per-game style assignments."
+      },
+      {
+        "id": "gameplay_readability",
+        "requirement": "Preserve expressions, interactables, navigation, hazards, clue symbols and accessible information at the actual gameplay scale."
+      }
+    ]
+  },
+  "asset_production_dimensions": [
+    "acquisition_generation",
+    "provider_credits",
+    "local_compute",
+    "blender_correction",
+    "uv_materials",
+    "rig_skin",
+    "clip_retarget",
+    "godot_integration",
+    "qa",
+    "rework_probability",
+    "future_maintenance",
+    "predicted_vs_actual_time_cost",
+    "failed_gates",
+    "correction_count",
+    "provider_model_revision",
+    "availability",
+    "runtime_evidence",
+    "subjective_review",
+    "estimate_confidence"
+  ],
+  "tokens": {
+    "status": "UNAVAILABLE",
+    "reason": "No attributable codex exec per-turn trace; aggregate goal counters are not imported"
+  }
+}

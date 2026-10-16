@@ -1,0 +1,10 @@
+{
+  "step_id": "e26ca08548854b2dbe25645d62f78760",
+  "label": "final-windows-release-package",
+  "phase": "integration",
+  "work_kind": "FAILURE_DEMAND",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:28:49.352532+00:00",
+  "event_id": "829264bc25794a7db2629af768ab2cf1"
+}

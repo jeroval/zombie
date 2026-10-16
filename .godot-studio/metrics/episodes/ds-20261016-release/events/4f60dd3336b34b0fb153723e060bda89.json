@@ -1,0 +1,10 @@
+{
+  "step_id": "8607eecf2f7a491cb64b275aee38e72f",
+  "label": "windows-release-package-retry",
+  "phase": "integration",
+  "work_kind": "FAILURE_DEMAND",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:25:51.778998+00:00",
+  "event_id": "4f60dd3336b34b0fb153723e060bda89"
+}

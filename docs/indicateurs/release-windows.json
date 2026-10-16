@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "game": "Dernier Signal",
+  "version": "1.0.0",
+  "platform": "Windows x86_64",
+  "built_at_utc": "2026-10-16T12:05:43.858553+00:00",
+  "source_commit": "62ece35dbbb782d8b5cc2878eb5d87100488a39b",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "resource_pack": "separate",
+  "startup_smoke": "PASS",
+  "exported_mission_traversal": {
+    "pass": true,
+    "time_seconds": 135.883333333334,
+    "components": 3,
+    "health": 82.0,
+    "kills": 34,
+    "shots": 108,
+    "observation": "agent input traversal, not human playtest"
+  },
+  "archive": {
+    "path": "dist/Dernier-Signal-windows-x86_64.zip",
+    "bytes": 42481546,
+    "sha256": "3b406168b9eb109f87d118648bb51c45b7663516ec11aa8f0c6ce9580650199c"
+  },
+  "executable": {
+    "path": "dist/Dernier-Signal/Dernier-Signal.exe",
+    "bytes": 109168128,
+    "sha256": "2bc74ae95c0366914b07a0073ade84a74864ef0d9d38cc57866ff1083b9d2a5a",
+    "authenticode": "NOT_SIGNED"
+  },
+  "resource_pack_file": {
+    "path": "dist/Dernier-Signal/Dernier-Signal.pck",
+    "bytes": 5840860,
+    "sha256": "a892fcfdbf4e9ae845d52d78b271c24410b530c38bf39af866476547cf5829e3"
+  },
+  "limitations": [
+    "No human playtest has been completed.",
+    "Creator artistic acceptance remains open.",
+    "The Windows executable has no Authenticode signature.",
+    "Performance outside the measured RTX 4070 SUPER system is not certified."
+  ]
+}

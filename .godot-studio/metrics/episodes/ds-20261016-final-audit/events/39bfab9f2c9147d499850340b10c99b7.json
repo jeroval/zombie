@@ -1,0 +1,10 @@
+{
+  "step_id": "de2bd3d2c69d418184396140b59ab14b",
+  "label": "ruff-format-check",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "schema_version": 1,
+  "type": "step_started",
+  "at": "2026-10-16T11:45:58.659154+00:00",
+  "event_id": "39bfab9f2c9147d499850340b10c99b7"
+}

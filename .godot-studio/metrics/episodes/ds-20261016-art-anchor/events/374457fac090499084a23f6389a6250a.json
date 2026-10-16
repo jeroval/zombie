@@ -1,0 +1,14 @@
+{
+  "step_id": "573540a97dce4d918584776a2e40761a",
+  "label": "zombie-export-channels",
+  "phase": "test",
+  "work_kind": "RISK_REDUCTION",
+  "status": "PASS",
+  "returncode": 0,
+  "duration_s": 0.219,
+  "measurement": "MONOTONIC_PROCESS_ELAPSED",
+  "schema_version": 1,
+  "type": "step_finished",
+  "at": "2026-10-16T10:36:07.916469+00:00",
+  "event_id": "374457fac090499084a23f6389a6250a"
+}
