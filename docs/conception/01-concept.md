@@ -1,6 +1,6 @@
 # Dernier Signal — conception initiale
 
-Version de vision : DS-V1, 16 octobre 2026. Nom de dépôt conservé : `zombie`.
+Version de vision : DS-V2, 16 octobre 2026. Nom de dépôt conservé : `zombie`.
 Le créateur délègue les choix de jeu ; ces décisions sont celles du responsable
 du projet, prises avant l'implémentation et révisables avec trace explicite.
 
@@ -84,7 +84,7 @@ de campagne n'est pas requise, les paramètres et meilleurs résultats le sont.
 
 ## Acceptation produit
 
-Les conditions de sortie de la [roadmap](../ROADMAP.md) sont le contrat DS-V1.
+Les conditions de sortie de la [roadmap](../ROADMAP.md) sont le contrat DS-V2.
 Le suivi distingue prévu, implémenté, vérifié techniquement et observé en jeu.
 Une réduction de ce contrat doit être explicitée ; aucun test vert ne redéfinit
 la portée. La version finale doit offrir un vrai début, un parcours et une fin.

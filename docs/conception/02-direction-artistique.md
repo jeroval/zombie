@@ -1,4 +1,4 @@
-# Direction artistique et sonore — DS-V1
+# Direction artistique et sonore — DS-V2
 
 Référence de production : `gac.inked-comic-3d` révision 1 et
 `gac.dessin-encre-3d` révision 1, plugin GAC 3.38.0.

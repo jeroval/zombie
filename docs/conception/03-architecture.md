@@ -1,4 +1,4 @@
-# Architecture initiale — DS-V1
+# Architecture initiale — DS-V2
 
 Godot 4.7.2, GDScript, jeu hors ligne. Conserver le studio Python pour les builds,
 assets et vérifications ; l'exécutable final ne dépend pas de ces outils.

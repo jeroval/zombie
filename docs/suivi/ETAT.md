@@ -1,10 +1,10 @@
 # État du développement
 
-Mis à jour : 16 octobre 2026, 12 h 10 Europe/Paris. Vision DS-V1.
+Mis à jour : 16 octobre 2026, 12 h 20 Europe/Paris. Vision DS-V2.
 
 - **Objectif global** : livrer Dernier Signal complet et vérifié avant 18 h.
 - **Dernier résultat réel** : studio local prêt ; scène de calibration uniquement.
-- **Jalon actif** : M0, cadrage, documentation et mesure.
+- **Jalon actif** : M1, boucle FPS compl?te en blockout.
 - **Prochain résultat** : M1, partie de bout en bout jouable en blockout.
 - **Branche** : `feat/dernier-signal` ; baseline studio conservée séparément.
 - **Blocage global** : aucun constaté.

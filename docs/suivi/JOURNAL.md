@@ -24,3 +24,12 @@ Les totaux cumulés d'un autre périmètre ne sont pas transformés en coût de 
 Travail précédent : **progression vérifiée**, puisqu'il a créé le studio et ses
 preuves techniques. Le tour actuel ouvre le contrat de jeu ; il ne réutilise
 pas ces preuves pour certifier le gameplay.
+
+## 12 h 20 ? correction cr?ateur, DS-V2
+
+Le cr?ateur impose explicitement un **FPS 3D**. Le choix isom?trique DS-D01
+est annul? : il venait de l'agent, pas de la demande. La boucle radio/extraction
+est conserv?e, avec cam?ra ? hauteur des yeux, souris, arme de premi?re personne
+et niveaux con?us pour cette perspective. Aucun gameplay isom?trique n'avait
+?t? impl?ment?. Le tour de simple acquiescement n'a pas modifi? le d?p?t ;
+ce tour applique r?ellement la correction et ouvre M1.
