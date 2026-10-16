@@ -1,18 +1,18 @@
 <!-- gac-development-metrics:v1 -->
 # Indicateurs du développement
 
-Généré : 2026-10-16T10:26:20.952428+00:00. Historique local ; aucune certification du jeu.
+Généré : 2026-10-16T10:38:41.425098+00:00. Historique local ; aucune certification du jeu.
 
 ## KPI
 
 | Indicateur | Valeur |
 |---|---|
-| Episodes enregistrés | 2 |
+| Episodes enregistrés | 3 |
 | Tokens entrée / sortie observés | Indisponible / Indisponible |
 | Entrée en cache (sous-ensemble de l’entrée) | Indisponible |
-| Couverture tokens | 0 tours importés, 0/2 épisodes avec compteurs ; couverture totale inconnue |
-| Durées cumulées des épisodes clos | 524.21 s |
-| Durées cumulées des commandes mesurées | 0.73 s |
+| Couverture tokens | 0 tours importés, 0/3 épisodes avec compteurs ; couverture totale inconnue |
+| Durées cumulées des épisodes clos | 1 076.42 s |
+| Durées cumulées des commandes mesurées | 149.97 s |
 | Reprises / commandes classées | 0 % ; couverture de classement 100 % |
 | Acceptation déclarée au premier verdict décisif | Indisponible sur 0 contrats/révisions |
 | Problèmes ouverts / introduits / préexistants / origine inconnue | 0 / 0 / 0 / 0 |
@@ -33,11 +33,13 @@ PASS technique, installation, génération et acceptation artistique/runtime res
 
 | Etape | Secondes de commandes cumulées | Commandes / échecs | Tokens entrée / sortie observés |
 |---|---|---|---|
-| test | 0.73 | 1 / 0 | Indisponible / Indisponible |
+| test | 149.97 | 3 / 0 | Indisponible / Indisponible |
 
 ### Cinq commandes les plus longues
 
+- animated-fps-input-traversal : 149.01 s ; PASS ; épisode `ds-20261016-art-anchor`.
 - fps-contract : 0.73 s ; PASS ; épisode `ds-20261016-fps-core`.
+- zombie-export-channels : 0.22 s ; PASS ; épisode `ds-20261016-art-anchor`.
 
 ### Cinq épisodes avec le plus de tokens observés
 
@@ -46,6 +48,7 @@ PASS technique, installation, génération et acceptation artistique/runtime res
 
 | Episode / objectif | Catégorie | Etat | Secondes écoulées | Bilan / suite |
 |---|---|---|---|---|
+| [.godot-studio/metrics/episodes/ds-20261016-art-anchor/episode.json](../../.godot-studio/metrics/episodes/ds-20261016-art-anchor/episode.json) — Adapt licensed zombie and pistol assets and verify FPS combat | assets | COMPLETED | 552.21 | Animated zombie and pistol integrated as experimental candidates; GLB skin/UV channels and four poses verified; graphical input traversal wins / Integrate authored district interiors, FPS hands and final art reviews |
 | [.godot-studio/metrics/episodes/ds-20261016-fps-core/episode.json](../../.godot-studio/metrics/episodes/ds-20261016-fps-core/episode.json) — Implement the complete first-person mission loop | code | COMPLETED | 466.34 | FPS blockout and mission-rule tests implemented; graphical camera verified; full input traversal and final assets remain / Validate combat and complete a normal-input mission; adapt licensed assets |
 | [.godot-studio/metrics/episodes/ds-20261016-design/episode.json](../../.godot-studio/metrics/episodes/ds-20261016-design/episode.json) — Définir le jeu complet, les jalons et les mesures avant production | design | COMPLETED | 57.87 | Contrat DS-V1, roadmap, conception, suivi et catalogue métrique rédigés avant production / Implémenter et vérifier une partie complète jouable |
 

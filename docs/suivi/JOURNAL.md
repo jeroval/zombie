@@ -46,3 +46,20 @@ inspectée : blockout volontairement brut. Un événement de recentrage souris
 provoquait un saut du regard ; ajout d'une courte fenêtre de stabilisation.
 Tests Python et Ruff inchangés passent. Assets, sons, options et build restent
 à produire ; M1 n'est pas clos sur ces seuls tests.
+
+## 12 h 35 — premier parcours par entrées et assets candidats
+
+Parcours agent graphique réussi sans téléportation, santé ajoutée ni saut de
+phase : 148,32 s, 3 composants, 34 neutralisations, 112 tirs, extraction vivante.
+Le mode headless n'émule pas la capture souris et ne convient pas à ce test.
+Ce résultat prouve une stratégie gagnante ; la durée cible et le plaisir humain
+ne sont pas validés. L'agent connaît les positions, vise exactement et soigne
+immédiatement. Il révèle aussi un quartier encore trop simple pour le rythme visé.
+
+Commit `df9e8f5` conserve la boucle blockout ; nouvelle branche
+`feat/fps-art-and-playability`. Téléchargement direct des sources officielles
+Quaternius CC0, provenance et empreintes conservées. Douze exports adaptés,
+zombie animé et pistolet intégrés comme candidats. Le contrat glTF des UV,
+poids, joints et animations passe ; les poses de 50 os changent dans Godot.
+Captures Idle et Punch inspectées avec véhicule et arme. Restent notamment
+mains FPS, ville authored, audio, feedback, options, feuilles multivues et export.

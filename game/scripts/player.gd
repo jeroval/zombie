@@ -19,6 +19,8 @@ var weapon: Node3D
 var recoil := 0.0
 var enabled := false
 var capture_settle := 0.0
+const ArtStyle = preload("res://scripts/art_style.gd")
+const PISTOL = preload("res://assets/models/pistol.glb")
 
 func _ready() -> void:
 	collision_layer = 2
@@ -38,15 +40,11 @@ func _ready() -> void:
 	camera.current = true
 	weapon = Node3D.new()
 	camera.add_child(weapon)
-	var mesh := MeshInstance3D.new()
-	var box := BoxMesh.new()
-	box.size = Vector3(0.12, 0.16, 0.38)
-	mesh.mesh = box
-	mesh.position = Vector3(0.24, -0.22, -0.42)
-	var mat := StandardMaterial3D.new()
-	mat.albedo_color = Color("35434f")
-	mesh.material_override = mat
-	weapon.add_child(mesh)
+	var model := PISTOL.instantiate()
+	model.position = Vector3(0.22, -0.25, -0.48)
+	model.rotation.y = PI
+	weapon.add_child(model)
+	ArtStyle.apply(model, Color.WHITE, 0.0015)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if not enabled or Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-16T10:26:20.952428+00:00",
+  "generated_at": "2026-10-16T10:38:41.425098+00:00",
   "authority": "studio-decision-kernel",
   "runtime_verified": false,
-  "episode_count": 2,
+  "episode_count": 3,
   "tokens": {
     "input_tokens": null,
     "output_tokens": null,
@@ -16,6 +16,11 @@
   "first_pass_percent": null,
   "report": "docs/indicateurs/mesures.md",
   "recent_episodes": [
+    {
+      "id": "ds-20261016-art-anchor",
+      "objective": "Adapt licensed zombie and pistol assets and verify FPS combat",
+      "status": "COMPLETED"
+    },
     {
       "id": "ds-20261016-fps-core",
       "objective": "Implement the complete first-person mission loop",

@@ -1,0 +1,23 @@
+{
+  "components": 3,
+  "health": 100.0,
+  "kills": 34,
+  "observation": "agent input traversal, not human playtest",
+  "pass": true,
+  "phase": 4,
+  "position": "(1.155989, 0.00084, -26.28028)",
+  "shots": 112,
+  "time": 148.316666666677,
+  "engine": "Godot 4.7.2 Compatibility",
+  "hardware": "RTX 4070 SUPER, NVIDIA 616.92",
+  "command": "Godot --fixed-fps 60 --path game --script res://tests/mission_input_run.gd",
+  "source_sha256": {
+    "game/scripts/art_style.gd": "b82e5c523fddddc3765ff827102670469b3267dd461b8bb5f5f678bfee3c25da",
+    "game/scripts/enemy.gd": "311d5cc4f0b972b8764ae03d973fbe8b327b31e02df82f277586d82fa33acb51",
+    "game/scripts/game.gd": "e174b89a043d530fabed336d500221ab162743b93a79b85542fd4dde6a5dd5cd",
+    "game/scripts/player.gd": "e070af0131ccd0a7d279bf17efa26b0294f249a6ae7b0e88bab3c0a19e9665d3",
+    "game/scripts/world.gd": "f33cec8b59ed4289c7c6dc3d55fda8fe1e2ae488bb08f3114ed132f4d7128fe2",
+    "game/tests/mission_input_run.gd": "74f0d947be36dbd66d0e3e8a1eb3392cea875298b2027c0c5ea57ad3dc83c7e7",
+    "game/assets/models/zombie_basic.glb": "3f825eb909475757eca40f7c8d2c66f9b7c8770dab18827b42e121211de952b7"
+  }
+}

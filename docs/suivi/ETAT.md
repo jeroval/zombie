@@ -6,7 +6,7 @@ Mis à jour : 16 octobre 2026, 12 h 20 Europe/Paris. Vision DS-V2.
 - **Dernier résultat réel** : boucle FPS en blockout, règles de mission testées.
 - **Jalon actif** : M1, boucle FPS complète en blockout.
 - **Prochain résultat** : M1, partie de bout en bout jouable en blockout.
-- **Branche** : `feat/dernier-signal` ; baseline studio conservée séparément.
+- **Branche** : `feat/fps-art-and-playability` ; boucle initiale conservée sur `feat/dernier-signal`.
 - **Blocage global** : aucun constaté.
 - **Incertain** : adaptation du kit animé, navigation, rythme, export templates.
 

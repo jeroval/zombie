@@ -12,6 +12,9 @@ pas des mesures comparatives de gain. À enrichir aux jalons avec preuves réell
 | GAC-I04 | Moyenne | Le doctor scaffold considère une inscription contenant `gac-local-studio` comme preuve générique | Vérifier le nom exact, le projet, la commande et un vrai initialize/list_tools | Deux jeux inscrits ; un serveur cassé doit rester distinct de celui qui marche |
 | GAC-I05 | Moyenne | Import implicite `.blend` échoue sans préférence Blender configurée dans Godot | Scaffold sources hors runtime, GLB explicite, politique d'import documentée | Projet neuf : export/import sans dépendre des préférences de l'éditeur |
 | GAC-I06 | À mesurer | Plusieurs entrées CLI/skills ont des syntaxes différentes | Aide unique de capacités et exemples exécutables testés | Exécuter les exemples documentés dans un projet temporaire |
+| GAC-I07 | Haute | Erreur de décision de l'agent : caméra isométrique supposée, corrigée par le créateur en FPS ; ce n'est pas un bug démontré du plugin | Distinguer explicitement contraintes créateur, choix agent et hypothèses dans le contrat initial | Une correction caméra doit invalider contrôles, carte et critères de revue dépendants |
+| GAC-I08 | Moyenne | Le parcours FPS headless ne capture pas la souris ; le même parcours graphique gagne | Déclarer les capacités d'entrée du backend dans les recettes de test | Un test d'entrée souris doit prouver la capture et le mouvement de caméra avant le scénario |
+| GAC-I09 | Moyenne | Blender background sans factory-startup charge les extensions utilisateur et tente de prendre leurs ports ; observé sur ce poste | Pour les scripts autonomes, préférer factory-startup et charger explicitement les dépendances nécessaires | Export identique et aucun démarrage de serveur d'extension annexe |
 
 Gain attendu : moins de diagnostic et de configuration incohérente. **Gain non
 mesuré**. Aucun pourcentage de temps ou de tokens n'est attribué à ces propositions.
